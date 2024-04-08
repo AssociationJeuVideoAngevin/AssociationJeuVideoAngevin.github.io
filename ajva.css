@@ -1,0 +1,76 @@
+body {
+  margin:0%;
+  background-image: url("../images/projects/ajva/back.png");
+}
+
+header {
+  background-color: #005d71;
+  color: #fff;
+}
+
+.conteneur-bandeau {
+  display: flex;
+  align-items: center;
+  max-width: 2000px;
+  margin: 0 auto;
+}
+
+.logo {
+  height: 100px;
+  margin-right: 20px;
+  padding-left:100px;
+}
+
+nav {
+  margin: 0 auto;
+}
+
+nav a {
+  margin: 0 20px;
+  text-decoration: none;
+  color: #fff;
+  font-family: "ObjectSans", Sans-serif;
+  font-size: 18px;
+}
+
+nav a:hover {
+  color: #ddd;
+}
+
+.bouton-discord {
+  height: 30px;
+  margin-left: 20px;
+  padding-right:100px;
+}
+
+.text {
+  font-family: "ObjectSans", Sans-serif;
+  font-size: 18px;
+}
+
+a {
+  color:#49484d;
+  font-size: 19px;
+}
+
+main {
+  margin-left: 20%;
+  margin-right: 20%;
+  margin-top: 2%;
+}
+
+h1 {
+    text-align: center;
+    font-family: "Montserrat", Sans-serif;
+    font-size: 50px;
+}
+
+hr {
+  width:30%;
+  border-bottom: 5px solid #000;
+}
+
+p {
+  font-family: "Montserrat", Sans-serif;
+  font-size: 16px;
+}
