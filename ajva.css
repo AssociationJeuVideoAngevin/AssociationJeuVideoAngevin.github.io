@@ -46,6 +46,7 @@ nav a:hover {
 .text {
   font-family: "ObjectSans", Sans-serif;
   font-size: 18px;
+  text-align: center;
 }
 
 a {
@@ -73,4 +74,50 @@ hr {
 p {
   font-family: "Montserrat", Sans-serif;
   font-size: 16px;
+}
+
+#membres {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  margin: 20px 0;
+  display: inline-block;
+}
+
+#membres:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.membre {
+  width: 30%; /* Ajuster la largeur selon vos besoins */
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  padding: 10px;
+  float: left;
+  margin-right: 20px;
+}
+
+.membre img {
+  width: 100%;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+.texte-membre {
+  text-align: left; /* Ajuster l'alignement du texte si besoin */
+}
+
+.texte-membre h3 {
+  margin-top: 0;
+}
+
+footer {
+  text-align: center; /* centre le footer horizontalement */
+  color: #ddd;
+  background-color: #005d71;
+  border-bottom: 0; /* supprime la bordure du bas */
+  border-right: 0; /* supprime la bordure de droite */
+  overflow: hidden; /* Ajoute la propriété clearfix */
 }
