@@ -149,6 +149,10 @@ p {
   height: auto;
 }
 
+.thumbnail-title {
+  font-weight: bold;
+}
+
 /* FOOTER */
 
 footer {
