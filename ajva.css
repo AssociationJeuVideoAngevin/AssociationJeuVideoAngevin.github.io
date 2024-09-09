@@ -1,7 +1,19 @@
+/* Sommaire
+# HEADER
+# GLOBAL PROPERTIES
+# NAVIGATION
+# MEMBRES
+# agenda
+# footer
+*/
+
+
 body {
   margin:0%;
   background-image: url("../images/projects/ajva/back.png");
 }
+
+/* HEADER */
 
 header {
   background-color: #005d71;
@@ -20,6 +32,8 @@ header {
   margin-right: 20px;
   padding-left:100px;
 }
+
+/* NAVIGATION */
 
 nav {
   margin: 0 auto;
@@ -49,6 +63,8 @@ nav a:hover {
   text-align: center;
 }
 
+/* GLOBAL PROPERTIES */
+
 a {
   color:#49484d;
   font-size: 19px;
@@ -75,6 +91,8 @@ p {
   font-family: "Montserrat", Sans-serif;
   font-size: 16px;
 }
+
+/* MEMBRES */
 
 #membres {
   display: flex;
@@ -112,6 +130,26 @@ p {
 .texte-membre h3 {
   margin-top: 0;
 }
+
+/* AGENDA */
+
+.thumbnails-agenda {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.thumbnail-agenda {
+  width: 30%;
+  height: auto;
+}
+
+.thumbnail-image {
+  width: 100%;
+  height: auto;
+}
+
+/* FOOTER */
 
 footer {
   text-align: center; /* centre le footer horizontalement */
