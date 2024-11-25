@@ -105,8 +105,15 @@ header {
   height: 80px;
 }
 
+.social {
+  display: flex;
+  flex-direction: row;
+  gap: 7px;
+}
+
 .social a {
-  font-size: inherit
+  font-size: inherit;
+
 }
 
 /* NAVIGATION */
