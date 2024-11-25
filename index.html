@@ -6,12 +6,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AJVA - association du jeu vidéo angevin</title>
     <link rel="stylesheet" href="https://fontawesome.com/">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
     <link rel="stylesheet" href="./ajva.css">
 </head>
 
 <body>
     <header>
-        <div class="conteneur-bandeau">
+        <div class="navbar">
+
+            <div class="dropdown">
+                <i class="fa-solid fa-bars dropbtn"></i>
+                <div class="dropdown-content">
+                    <a href="#association">L'association</a>
+                    <a href="#membres">Nos membres</a>
+                    <a href="#agenda">Nous rencontrer</a>
+                    <a href="#contact">Contact</a>
+                </div>
+            </div>
+
+
             <a href="#">
                 <img src="./static/images/full_logo_with_text_ajva_1920.png" alt="Logo" class="logo">
             </a>
@@ -21,15 +34,17 @@
                 <a href="#agenda">Nous rencontrer</a>
                 <a href="#contact">Contact</a>
             </nav>
-            <a href="https://discord.gg/MAqysMSsG8">
-                <img src="static/images/discord-logo-white_with_text.png" alt="Discord" class="bouton-social-network">
-            </a>
-            <a href="https://bsky.app/profile/ajva.bsky.social">
-                <img src="./static/images/bluesky_media_kit_logo_2.png" alt="Bluesky" class="bouton-social-network">
-            </a>
-            <a href="https://mastodon.social/@ajva">
-                <img src="./static/images/logo_mastodon_128.png" alt="Mastodon" class="bouton-social-network">
-            </a>
+            <div class="social">
+                <a href="https://discord.gg/MAqysMSsG8">
+                    <img src="static/images/logo_discord.png" alt="Discord" class="social-network-btn">
+                </a>
+                <a href="https://bsky.app/profile/ajva.bsky.social">
+                    <img src="./static/images/bluesky_media_kit_logo_2.png" alt="Bluesky" class="social-network-btn">
+                </a>
+                <a href="https://mastodon.social/@ajva">
+                    <img src="./static/images/logo_mastodon_128.png" alt="Mastodon" class="social-network-btn">
+                </a>
+            </div>
         </div>
     </header>
     <main>
