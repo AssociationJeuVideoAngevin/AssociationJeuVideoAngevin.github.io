@@ -9,7 +9,7 @@
 
 
 body {
-  margin:0%;
+  margin: 0%;
   background-image: url("../images/projects/ajva/back.png");
 }
 
@@ -30,7 +30,7 @@ header {
 .logo {
   height: 100px;
   margin-right: 20px;
-  padding-left:100px;
+  padding-left: 100px;
 }
 
 /* NAVIGATION */
@@ -54,7 +54,7 @@ nav a:hover {
 .bouton-social-network {
   height: 30px;
   margin-left: 20px;
-  padding-right:20px;
+  padding-right: 20px;
 }
 
 .text {
@@ -66,7 +66,7 @@ nav a:hover {
 /* GLOBAL PROPERTIES */
 
 a {
-  color:#49484d;
+  color: #49484d;
   font-size: 19px;
 }
 
@@ -77,13 +77,13 @@ main {
 }
 
 h1 {
-    text-align: center;
-    font-family: "Montserrat", Sans-serif;
-    font-size: 50px;
+  text-align: center;
+  font-family: "Montserrat", Sans-serif;
+  font-size: 50px;
 }
 
 hr {
-  width:30%;
+  width: 30%;
   border-bottom: 5px solid #000;
 }
 
@@ -94,27 +94,15 @@ p {
 
 /* MEMBRES */
 
-#membres {
-  display: flex;
-  flex-wrap: nowrap;
-  justify-content: space-between;
-  margin: 20px 0;
-  display: inline-block;
-}
-
-#membres:after {
-  content: "";
-  display: block;
-  clear: both;
+.members-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
 }
 
 .membre {
-  width: 30%; /* Ajuster la largeur selon vos besoins */
-  margin-bottom: 20px;
   border: 1px solid #ccc;
   padding: 10px;
-  float: left;
-  margin-right: 20px;
 }
 
 .membre img {
@@ -123,12 +111,21 @@ p {
   margin-bottom: 10px;
 }
 
-.texte-membre {
-  text-align: left; /* Ajuster l'alignement du texte si besoin */
+.membre h3 {
+  margin-top: 0;
 }
 
-.texte-membre h3 {
-  margin-top: 0;
+@media (max-width: 1024px) {
+  .members-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* 1 colonne pour les petits écrans (moins de 768px) */
+@media (max-width: 768px) {
+  .members-grid {
+    grid-template-columns: 1fr;
+  }
 }
 
 /* AGENDA */
@@ -157,10 +154,14 @@ p {
 /* FOOTER */
 
 footer {
-  text-align: center; /* centre le footer horizontalement */
+  text-align: center;
+  /* centre le footer horizontalement */
   color: #ddd;
   background-color: #005d71;
-  border-bottom: 0; /* supprime la bordure du bas */
-  border-right: 0; /* supprime la bordure de droite */
-  overflow: hidden; /* Ajoute la propriété clearfix */
+  border-bottom: 0;
+  /* supprime la bordure du bas */
+  border-right: 0;
+  /* supprime la bordure de droite */
+  overflow: hidden;
+  /* Ajoute la propriété clearfix */
 }
