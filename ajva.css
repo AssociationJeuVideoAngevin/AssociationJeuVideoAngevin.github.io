@@ -13,6 +13,30 @@ body {
   background-image: url("../images/projects/ajva/back.png");
 }
 
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+}
+
+.text-center {
+  text-align: center;
+}
+
+
+@media (max-width: 1024px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* 1 colonne pour les petits écrans (moins de 768px) */
+@media (max-width: 768px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}
+
 /* HEADER */
 
 header {
@@ -93,13 +117,6 @@ p {
 }
 
 /* MEMBRES */
-
-.members-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 25px;
-}
-
 .membre {
   border: 1px solid #ccc;
   padding: 10px;
@@ -115,39 +132,14 @@ p {
   margin-top: 0;
 }
 
-@media (max-width: 1024px) {
-  .members-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-/* 1 colonne pour les petits écrans (moins de 768px) */
-@media (max-width: 768px) {
-  .members-grid {
-    grid-template-columns: 1fr;
-  }
-}
 
 /* AGENDA */
-
-.thumbnails-agenda {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  gap: 2vw;
-}
-
-.thumbnail-agenda {
-  width: 30%;
-  height: auto;
-}
-
-.thumbnail-image {
+.thumbnail-agenda img {
   width: 100%;
   height: auto;
 }
 
-.thumbnail-title {
+.thumbnail-agenda .title {
   font-weight: bold;
 }
 
