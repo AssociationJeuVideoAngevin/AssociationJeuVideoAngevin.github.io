@@ -39,10 +39,15 @@ body {
 /* HEADER */
 
 /* The container <div> - needed to position the dropdown content */
+
 .dropdown {
   display: none;
-  position: relative;
-  display: inline-block;
+}
+
+@media (max-width: 768px) {
+  .dropdown {
+    display: block;
+  }
 }
 
 /* Dropdown Content (Hidden by Default) */
@@ -89,7 +94,7 @@ header {
 
 @media (max-width: 768px) {
   .navbar {
-    padding-inline: 10px;
+    padding-inline: 30px;
   }
 }
 
