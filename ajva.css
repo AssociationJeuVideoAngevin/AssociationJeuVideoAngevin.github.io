@@ -27,6 +27,9 @@ body {
   text-align: center;
 }
 
+.clickable:hover {
+  opacity: 0.7;
+}
 
 @media (max-width: 1024px) {
   .grid {
@@ -54,6 +57,7 @@ body {
 .drop-btn {
   cursor: pointer;
 }
+
 .show {display:block !important;}
 .dropdown-content {
   display: none;
@@ -136,9 +140,6 @@ nav a:hover {
   height: 30px;
 }
 
-.social-network-btn:hover {
-  opacity: 0.5;
-}
 
 .text {
   font-family: "ObjectSans", Sans-serif;

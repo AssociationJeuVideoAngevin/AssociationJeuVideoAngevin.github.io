@@ -15,8 +15,9 @@
         <div class="navbar">
 
             <div class="dropdown">
-                <i id="dropBtn" class="fa-solid fa-bars drop-btn" onclick="updateDropDownVisibility(true)"></i>
-                <div id="myDropdown" class="dropdown-content" onmouseleave="updateDropDownVisibility(false)">
+                <i id="dropBtn" class="fa-solid fa-bars drop-btn clickable"
+                    onclick="updateDropDownVisibility(true)"></i>
+                <div id="myDropdown" class="dropdown-content">
                     <a href="#association">
                         <p>L'association</p>
                     </a>
@@ -44,13 +45,15 @@
             </nav>
             <div class="social">
                 <a href="https://discord.gg/MAqysMSsG8">
-                    <img src="static/images/logo_discord.png" alt="Discord" class="social-network-btn">
+                    <img src="static/images/logo_discord.png" alt="Discord" class="social-network-btn clickable">
                 </a>
                 <a href="https://bsky.app/profile/ajva.bsky.social">
-                    <img src="./static/images/bluesky_media_kit_logo_2.png" alt="Bluesky" class="social-network-btn">
+                    <img src="./static/images/bluesky_media_kit_logo_2.png" alt="Bluesky"
+                        class="social-network-btn clickable">
                 </a>
                 <a href="https://mastodon.social/@ajva">
-                    <img src="./static/images/logo_mastodon_128.png" alt="Mastodon" class="social-network-btn">
+                    <img src="./static/images/logo_mastodon_128.png" alt="Mastodon"
+                        class="social-network-btn clickable">
                 </a>
             </div>
         </div>
@@ -156,12 +159,12 @@
             <h3>Suivez-nous sur les réseaux sociaux</h3>
 
             <a href="https://discord.gg/MAqysMSsG8">
-                <img src="static/images/logo_discord.png" alt="Discord" class="social-network-btn">
+                <img src="static/images/logo_discord.png" alt="Discord" class="social-network-btn clickable">
             </a>
             <a href="https://bsky.app/profile/ajva.bsky.social"><img src="./static/images/bluesky_media_kit_logo_2.png"
-                    class="social-network-btn"></a>
+                    class="social-network-btn clickable"></a>
             <a href="https://mastodon.social/@ajva"><img src="./static/images/logo_mastodon_128.png" alt="Mastodon"
-                    class="social-network-btn"></a>
+                    class="social-network-btn clickable"></a>
         </div>
 
         <div class="copyright">
@@ -185,10 +188,22 @@
         }
     }
 
-    document.addEventListener('click', (event) => {
-        if (!dropdownMenu.contains(event.target) && !dropBtn.contains(event.target)) {
-            updateDropDownVisibility(false);
+
+    function setHoverState(state) {
+        isHovering = state;
+        if (!isHovering) {
+            setTimeout(() => {
+                if (!isHovering) {
+                    updateDropDownVisibility(false);
+                }
+            }, 100);
         }
-    });
+    }
+
+    dropBtn.addEventListener('mouseenter', () => setHoverState(true));
+    dropBtn.addEventListener('mouseleave', () => setHoverState(false));
+
+    dropdownMenu.addEventListener('mouseenter', () => setHoverState(true));
+    dropdownMenu.addEventListener('mouseleave', () => setHoverState(false));
 
 </script>
