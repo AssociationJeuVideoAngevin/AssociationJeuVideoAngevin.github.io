@@ -15,8 +15,8 @@
         <div class="navbar">
 
             <div class="dropdown">
-                <i class="fa-solid fa-bars dropbtn"></i>
-                <div class="dropdown-content">
+                <i id="dropBtn" class="fa-solid fa-bars drop-btn" onclick="updateDropDownVisibility(true)"></i>
+                <div id="myDropdown" class="dropdown-content" onmouseleave="updateDropDownVisibility(false)">
                     <a href="#association">
                         <p>L'association</p>
                     </a>
@@ -171,3 +171,24 @@
 </body>
 
 </html>
+
+<script>
+
+    const dropdownMenu = document.getElementById('myDropdown');
+    const dropBtn = document.getElementById("dropBtn");
+
+    function updateDropDownVisibility(visibility) {
+        if (visibility) {
+            document.getElementById('myDropdown').classList.toggle('show');
+        } else {
+            document.getElementById('myDropdown').classList.remove('show');
+        }
+    }
+
+    document.addEventListener('click', (event) => {
+        if (!dropdownMenu.contains(event.target) && !dropBtn.contains(event.target)) {
+            updateDropDownVisibility(false);
+        }
+    });
+
+</script>

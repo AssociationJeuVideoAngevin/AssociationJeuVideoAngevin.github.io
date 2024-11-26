@@ -51,6 +51,10 @@ body {
   }
 }
 
+.drop-btn {
+  cursor: pointer;
+}
+.show {display:block !important;}
 .dropdown-content {
   display: none;
   position: absolute;
@@ -60,6 +64,7 @@ body {
   z-index: 1;
 }
 
+
 .dropdown-content a {
   padding: 1px 20px;
   text-decoration: none;
@@ -68,10 +73,6 @@ body {
 
 .dropdown-content a:hover {
   background-color: gainsboro;
-}
-
-.dropdown:hover .dropdown-content {
-  display: block;
 }
 
 
