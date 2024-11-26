@@ -14,7 +14,7 @@
     <header>
         <div class="navbar">
 
-            <div id="menu-dropdown">
+            <div id="menu-dropdown" onmouseleave="updateDropDownVisibility(false)">
                 <i class="fa-solid fa-bars clickable" onclick="updateDropDownVisibility(true)"></i>
                 <div id="dropdown-content" onclick="updateDropDownVisibility(false)">
                     <a href="#association">
@@ -175,9 +175,6 @@
 </html>
 
 <script>
-    const menuDropdown = document.getElementById("menu-dropdown")
-    menuDropdown.addEventListener('mouseleave', () => updateDropDownVisibility(false));
-
     function updateDropDownVisibility(visibility) {
         if (visibility) {
             document.getElementById('dropdown-content').classList.toggle('show');
