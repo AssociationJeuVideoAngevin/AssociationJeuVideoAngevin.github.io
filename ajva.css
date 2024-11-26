@@ -7,6 +7,10 @@
 # footer
 */
 
+html {
+  scroll-behavior: smooth;
+}
+
 * {
   font-family: "ObjectSans", Sans-serif;
   font-size: 18px;
