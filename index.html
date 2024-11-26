@@ -14,10 +14,10 @@
     <header>
         <div class="navbar">
 
-            <div class="dropdown">
+            <div id="dropdown" class="dropdown">
                 <i id="dropBtn" class="fa-solid fa-bars drop-btn clickable"
                     onclick="updateDropDownVisibility(true)"></i>
-                <div id="myDropdown" class="dropdown-content">
+                <div id="myDropdown" class="dropdown-content" onclick="updateDropDownVisibility(false)">
                     <a href="#association">
                         <p>L'association</p>
                     </a>
@@ -176,9 +176,8 @@
 </html>
 
 <script>
-
-    const dropdownMenu = document.getElementById('myDropdown');
-    const dropBtn = document.getElementById("dropBtn");
+    const drop = document.getElementById("dropdown")
+    drop.addEventListener('mouseleave', () => updateDropDownVisibility(false));
 
     function updateDropDownVisibility(visibility) {
         if (visibility) {
@@ -187,23 +186,4 @@
             document.getElementById('myDropdown').classList.remove('show');
         }
     }
-
-
-    function setHoverState(state) {
-        isHovering = state;
-        if (!isHovering) {
-            setTimeout(() => {
-                if (!isHovering) {
-                    updateDropDownVisibility(false);
-                }
-            }, 100);
-        }
-    }
-
-    dropBtn.addEventListener('mouseenter', () => setHoverState(true));
-    dropBtn.addEventListener('mouseleave', () => setHoverState(false));
-
-    dropdownMenu.addEventListener('mouseenter', () => setHoverState(true));
-    dropdownMenu.addEventListener('mouseleave', () => setHoverState(false));
-
 </script>
