@@ -8,15 +8,16 @@
     <link rel="stylesheet" href="https://fontawesome.com/">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
     <link rel="stylesheet" href="./ajva.css">
+    <script src="dropdown.js"></script>
 </head>
 
 <body>
     <header>
         <div class="navbar">
 
-            <div id="menu-dropdown" onmouseleave="updateDropDownVisibility(false)">
-                <i class="fa-solid fa-bars clickable" onclick="updateDropDownVisibility(true)"></i>
-                <div id="dropdown-content" onclick="updateDropDownVisibility(false)">
+            <div id="menu-dropdown" onmouseleave="updateDropDownVisibility('dropdown-content', false)">
+                <i class="fa-solid fa-bars clickable" onclick="updateDropDownVisibility('dropdown-content', true)"></i>
+                <div id="dropdown-content" onclick="updateDropDownVisibility('dropdown-content', false)">
                     <a href="#association">
                         <p>L'association</p>
                     </a>
@@ -173,13 +174,3 @@
 </body>
 
 </html>
-
-<script>
-    function updateDropDownVisibility(visibility) {
-        if (visibility) {
-            document.getElementById('dropdown-content').classList.toggle('show');
-        } else {
-            document.getElementById('dropdown-content').classList.remove('show');
-        }
-    }
-</script>
