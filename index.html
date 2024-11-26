@@ -16,7 +16,7 @@
         <div class="navbar">
 
             <div id="menu-dropdown" onmouseleave="updateDropDownVisibility('dropdown-content', false)">
-                <i class="fa-solid fa-bars clickable" onclick="updateDropDownVisibility('dropdown-content', true)"></i>
+                <i id="menu-dropdown-activator" class="fa-solid fa-bars clickable" onclick="updateDropDownVisibility('dropdown-content', true)"></i>
                 <div id="dropdown-content" onclick="updateDropDownVisibility('dropdown-content', false)">
                     <a href="#association">
                         <p>L'association</p>
@@ -64,7 +64,7 @@
 
             <hr><br>
 
-            <p class="text">Promouvoir le jeu vidéo à Angers et tisser des liens entre les créateurs de jeux angevins et
+            <p class="text-center">Promouvoir le jeu vidéo à Angers et tisser des liens entre les créateurs de jeux angevins et
                 les communautés de joueurs présents à Angers, c'est ça qui nous anime.
                 <br><br>
                 Fondée en 2024 à Angers, notre association est à la recherche de nouveaux membres, passionnés par le jeu

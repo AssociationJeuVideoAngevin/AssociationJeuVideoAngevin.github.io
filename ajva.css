@@ -7,11 +7,9 @@
 # footer
 */
 
+
 html {
   scroll-behavior: smooth;
-}
-
-* {
   font-family: "ObjectSans", Sans-serif;
   font-size: 18px;
 }
@@ -59,7 +57,7 @@ body {
   }
 }
 
-.drop-btn {
+#menu-dropdown-activator {
   cursor: pointer;
   padding: 5px;
 }
@@ -136,8 +134,6 @@ nav a {
   margin: 0 20px;
   text-decoration: none;
   color: #fff;
-  font-family: "ObjectSans", Sans-serif;
-  font-size: 18px;
 }
 
 nav a:hover {
@@ -149,18 +145,10 @@ nav a:hover {
   height: 30px;
 }
 
-
-.text {
-  font-family: "ObjectSans", Sans-serif;
-  font-size: 18px;
-  text-align: center;
-}
-
 /* GLOBAL PROPERTIES */
 
 a {
   color: #49484d;
-  font-size: 19px;
 }
 
 main {
@@ -185,10 +173,7 @@ hr {
   border-bottom: 5px solid #000;
 }
 
-p {
-  font-family: "Montserrat", Sans-serif;
-  font-size: 16px;
-}
+
 
 /* MEMBRES */
 .membre {
