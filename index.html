@@ -1,15 +1,39 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AJVA - association du jeu vidéo angevin</title>
     <link rel="stylesheet" href="https://fontawesome.com/">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
     <link rel="stylesheet" href="./ajva.css">
+    <script src="dropdown.js"></script>
 </head>
+
 <body>
     <header>
-        <div class="conteneur-bandeau">
+        <div class="navbar">
+
+            <div id="menu-dropdown" onmouseleave="updateDropDownVisibility('dropdown-content', false)">
+                <i id="menu-dropdown-activator" class="fa-solid fa-bars clickable" onclick="updateDropDownVisibility('dropdown-content', true)"></i>
+                <div id="dropdown-content" onclick="updateDropDownVisibility('dropdown-content', false)">
+                    <a href="#association">
+                        <p>L'association</p>
+                    </a>
+                    <a href="#membres">
+                        <p>Nos membres</p>
+                    </a>
+                    <a href="#agenda">
+                        <p>Nous rencontrer</p>
+                    </a>
+                    <a href="#contact">
+                        <p>Contact</p>
+                    </a>
+                </div>
+            </div>
+
+
             <a href="#">
                 <img src="./static/images/full_logo_with_text_ajva_1920.png" alt="Logo" class="logo">
             </a>
@@ -19,15 +43,19 @@
                 <a href="#agenda">Nous rencontrer</a>
                 <a href="#contact">Contact</a>
             </nav>
-            <a href="https://discord.gg/MAqysMSsG8">
-                <img src="static/images/discord-logo-white_with_text.png" alt="Discord" class="bouton-social-network">
-            </a>
-            <a href="https://bsky.app/profile/ajva.bsky.social">
-                <img src="./static/images/bluesky_media_kit_logo_2.png" alt="Bluesky" class="bouton-social-network">
-            </a>
-           <a href="https://mastodon.social/@ajva">
-                <img src="./static/images/logo_mastodon_128.png" alt="Mastodon" class="bouton-social-network">
-            </a>
+            <div class="social">
+                <a href="https://discord.gg/MAqysMSsG8">
+                    <img src="static/images/logo_discord.png" alt="Discord" class="social-network-btn clickable">
+                </a>
+                <a href="https://bsky.app/profile/ajva.bsky.social">
+                    <img src="./static/images/bluesky_media_kit_logo_2.png" alt="Bluesky"
+                        class="social-network-btn clickable">
+                </a>
+                <a href="https://mastodon.social/@ajva">
+                    <img src="./static/images/logo_mastodon_128.png" alt="Mastodon"
+                        class="social-network-btn clickable">
+                </a>
+            </div>
         </div>
     </header>
     <main>
@@ -36,12 +64,15 @@
 
             <hr><br>
 
-            <p class="text">Promouvoir le jeu vidéo à Angers et tisser des liens entre les créateurs de jeux angevins et les communautés de joueurs présents à Angers, c'est ça qui nous anime.
+            <p class="text-center">Promouvoir le jeu vidéo à Angers et tisser des liens entre les créateurs de jeux angevins et
+                les communautés de joueurs présents à Angers, c'est ça qui nous anime.
                 <br><br>
-                Fondée en 2024 à Angers, notre association est à la recherche de nouveaux membres, passionnés par le jeu vidéo, qu'il s'agisse de joueurs ou de créateurs.
+                Fondée en 2024 à Angers, notre association est à la recherche de nouveaux membres, passionnés par le jeu
+                vidéo, qu'il s'agisse de joueurs ou de créateurs.
                 <br><br>
-                En nous rejoignant, vous pourrez participer à des évènements autour du jeu, rencontrer d'autres joueurs, discuter de votre passion, etc.
-                <br><br>        
+                En nous rejoignant, vous pourrez participer à des évènements autour du jeu, rencontrer d'autres joueurs,
+                discuter de votre passion, etc.
+                <br><br>
         </section>
 
         <section id="membres">
@@ -49,46 +80,60 @@
 
             <hr><br>
 
-            <div class="membre">
-                <img src="./static/images/photo_profil_round.png" alt="photo de Aqueuse">
-                <div class="texte-membre">
-                  <h3>Laura Bécognée aka Aqueuse</h3>
-                  <p>Créatrice de l'association, gère aussi la communication et le discord.</p>
+            <div class="grid">
+                <div class="membre">
+                    <img src="./static/images/photo_profil_round.png" alt="photo de Aqueuse">
+                    <div>
+                        <h3>Laura Bécognée aka Aqueuse</h3>
+                        <p>Créatrice de l'association, gère aussi la communication et le discord.</p>
+                    </div>
                 </div>
-              </div>
-              <div class="membre">
-                <img src="./static/images/profil_jonas_rounded.png" alt="photo de Jonas">
-                <div class="texte-membre">
-                  <h3>JonasRedStar</h3>
-                  <p>Membre cofondateur, représente les joueurs les plus jeunes de l'association.</p>
+                <div class="membre">
+                    <img src="./static/images/profil_jonas_rounded.png" alt="photo de Jonas">
+                    <div>
+                        <h3>JonasRedStar</h3>
+                        <p>Membre cofondateur, représente les joueurs les plus jeunes de l'association.</p>
+                    </div>
                 </div>
-              </div>
-              <div class="membre">
-                <img src="./static/images/marcb152_rounded.png" alt="photo de Marc">
-                <div class="texte-membre">
-                    <h3>Marc aka marcb152</h3>
-                    <p>Etudiant & développeur logiciel freelance</p><br>
+                <div class="membre">
+                    <img src="./static/images/marcb152_rounded.png" alt="photo de Marc">
+                    <div>
+                        <h3>Marc aka marcb152</h3>
+                        <p>Etudiant & développeur logiciel freelance</p><br>
+                    </div>
                 </div>
-              </div>
+            </div>
+
         </section>
 
-        <div class="agenda" id="agenda">
+        <div id="agenda">
             <h1>L'association sera présente</h1>
 
             <hr><br>
-            <div class="thumbnails-agenda">
+            <div class="grid">
                 <div class="thumbnail-agenda">
-                    <a href="https://form.jotform.com/243113640423040"><img class="thumbnail-image" src="static/images/little_big_lan.png"></a>
-                    <p class="thumbnail-title">Soirée Little Big LAN à MyDigitalSchool Angers</p>
-                    <p class="over-thumbnail-agenda"><a href="https://www.mydigitalschool.com/ecole-multimedia-angers">MyDigitalSchool Angers</a> ouvre ses portes pour un moment de partage autour des jeux, pour les gamers comme pour ceux qui veulent simplement passer un bon moment ensemble.</p>
+                    <a href="https://form.jotform.com/243113640423040">
+                        <img src="static/images/little_big_lan.png">
+                    </a>
+                    <p class="title">Soirée Little Big LAN à MyDigitalSchool Angers</p>
+                    <p>
+                        <a href="https://www.mydigitalschool.com/ecole-multimedia-angers">MyDigitalSchool Angers</a>
+                        ouvre ses portes pour un moment de partage autour des jeux, pour les gamers comme pour ceux qui
+                        veulent simplement passer un bon moment ensemble.
+                    </p>
                     <p>🗓️ Le 5 décembre à 18h</p>
                     <a href="https://maps.app.goo.gl/ZbfcWfaj8rvMAGD37">🗺️ My Digital School</a>
                 </div>
-    
+
                 <div class="thumbnail-agenda">
-                    <a href="https://www.meetup.com/jeu-video-a-angers-creer-et-jouer/events/304563647/?utm_medium=referral&utm_campaign=share-btn_savedevents_share_modal&utm_source=link"><img class="thumbnail-image" src="static/images/meeting_ajva.png"></a>
-                    <p class="thumbnail-title">Présentation de l'asso et discussion sur le jeu à Angers</p>
-                    <p class="over-thumbnail-agenda">Rendez vous au restaurant Burger and Friends à 18h pour boire un verre et découvrir l'association, proposer vos idées et rencontrer d'autres joueurs et/ou créateurs</p>
+                    <a
+                        href="https://www.meetup.com/jeu-video-a-angers-creer-et-jouer/events/304563647/?utm_medium=referral&utm_campaign=share-btn_savedevents_share_modal&utm_source=link">
+                        <img src="static/images/meeting_ajva.png">
+                    </a>
+                    <p class="title">Présentation de l'asso et discussion sur le jeu à Angers</p>
+                    <p>Rendez vous au restaurant Burger and Friends à 18h pour boire un
+                        verre et découvrir l'association, proposer vos idées et rencontrer d'autres joueurs et/ou
+                        créateurs</p>
                     <p>🗓️ Le 15 novembre à 18h</p>
                     <a href="https://maps.app.goo.gl/eLQkZBsSgbsxPuo79">🗺️ Burger & Friends</a>
                 </div>
@@ -99,25 +144,33 @@
             <h1>Contact</h1>
 
             <hr><br>
-    
-            <p class="text">
+
+            <p class="text-center">
                 Commencez par poster un message sur notre <b><a href="https://discord.gg/MAqysMSsG8">discord</a></b> \o_
-                <br><br>
-                Vous pouvez aussi nous envoyer un mail à <a href="mailto:contact@ajva.fr"><b>contact@ajva.fr</b></a></p>    
             </p>
+            <p class="text-center">Vous pouvez aussi nous envoyer un mail à <a
+                    href="mailto:contact@ajva.fr"><b>contact@ajva.fr</b></a></p>
+
         </section>
     </main>
 
     <footer>
         <div class="social-media">
-          <h3>Suivez-nous sur les réseaux sociaux</h3>
-            <a href="https://mastodon.social/@ajva"><img src="./static/images/logo_mastodon_128.png" alt="Mastodon" width="50" height="50"></a>
-            <a href="https://bsky.app/profile/ajva.bsky.social"><img src="./static/images/bluesky_media_kit_logo_2.png" alt="Bluesky" width="50" height="50"></a>
+            <h3>Suivez-nous sur les réseaux sociaux</h3>
+
+            <a href="https://discord.gg/MAqysMSsG8">
+                <img src="static/images/logo_discord.png" alt="Discord" class="social-network-btn clickable">
+            </a>
+            <a href="https://bsky.app/profile/ajva.bsky.social"><img src="./static/images/bluesky_media_kit_logo_2.png"
+                    class="social-network-btn clickable"></a>
+            <a href="https://mastodon.social/@ajva"><img src="./static/images/logo_mastodon_128.png" alt="Mastodon"
+                    class="social-network-btn clickable"></a>
         </div>
 
         <div class="copyright">
-          <p>&copy; 2024 - Association du Jeu Vidéo Angevin - Tous droits réservés</p>
+            <p>&copy; 2024 - Association du Jeu Vidéo Angevin - Tous droits réservés</p>
         </div>
-      </footer>      
+    </footer>
 </body>
+
 </html>

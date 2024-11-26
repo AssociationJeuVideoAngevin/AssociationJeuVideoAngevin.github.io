@@ -8,113 +8,177 @@
 */
 
 
+html {
+  scroll-behavior: smooth;
+  font-family: "ObjectSans", Sans-serif;
+  font-size: 18px;
+}
+
 body {
-  margin:0%;
-  background-image: url("../images/projects/ajva/back.png");
+  margin: 0;
+  padding: 0;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.clickable:hover {
+  opacity: 0.7;
+  cursor: pointer;
+}
+
+@media (max-width: 1024px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
 }
 
 /* HEADER */
+#menu-dropdown {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  #menu-dropdown {
+    display: block;
+  }
+}
+
+#menu-dropdown-activator {
+  cursor: pointer;
+  padding: 5px;
+}
+
+.show {
+  display: block !important;
+}
+
+#dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: white;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+
+#dropdown-content a {
+  padding: 1px 20px;
+  text-decoration: none;
+  display: block;
+}
+
+#dropdown-content a:hover {
+  background-color: gainsboro;
+}
+
+
+@media (max-width: 768px) {
+  nav {
+    display: none;
+  }
+
+}
 
 header {
   background-color: #005d71;
   color: #fff;
 }
 
-.conteneur-bandeau {
+.navbar {
   display: flex;
   align-items: center;
-  max-width: 2000px;
-  margin: 0 auto;
+  justify-content: space-between;
+  padding-inline: 100px;
+  padding-block: 10px;
 }
 
-.logo {
-  height: 100px;
-  margin-right: 20px;
-  padding-left:100px;
+@media (max-width: 768px) {
+  .navbar {
+    padding-inline: 30px;
+  }
+}
+
+.navbar .logo {
+  height: 80px;
+}
+
+.social {
+  display: flex;
+  flex-direction: row;
+  gap: 7px;
+}
+
+.social a {
+  font-size: inherit;
+
 }
 
 /* NAVIGATION */
-
-nav {
-  margin: 0 auto;
-}
 
 nav a {
   margin: 0 20px;
   text-decoration: none;
   color: #fff;
-  font-family: "ObjectSans", Sans-serif;
-  font-size: 18px;
 }
 
 nav a:hover {
   color: #ddd;
 }
 
-.bouton-social-network {
-  height: 30px;
-  margin-left: 20px;
-  padding-right:20px;
-}
 
-.text {
-  font-family: "ObjectSans", Sans-serif;
-  font-size: 18px;
-  text-align: center;
+.social-network-btn {
+  height: 30px;
 }
 
 /* GLOBAL PROPERTIES */
 
 a {
-  color:#49484d;
-  font-size: 19px;
+  color: #49484d;
 }
 
 main {
-  margin-left: 20%;
-  margin-right: 20%;
+  margin-inline: 20%;
   margin-top: 2%;
 }
 
+@media (max-width: 768px) {
+  main {
+    margin-inline: 10%;
+  }
+}
+
 h1 {
-    text-align: center;
-    font-family: "Montserrat", Sans-serif;
-    font-size: 50px;
+  text-align: center;
+  font-family: "Montserrat", Sans-serif;
+  font-size: 50px;
 }
 
 hr {
-  width:30%;
+  width: 30%;
   border-bottom: 5px solid #000;
 }
 
-p {
-  font-family: "Montserrat", Sans-serif;
-  font-size: 16px;
-}
+
 
 /* MEMBRES */
-
-#membres {
-  display: flex;
-  flex-wrap: nowrap;
-  justify-content: space-between;
-  margin: 20px 0;
-  display: inline-block;
-}
-
-#membres:after {
-  content: "";
-  display: block;
-  clear: both;
-}
-
 .membre {
-  width: 30%; /* Ajuster la largeur selon vos besoins */
-  margin-bottom: 20px;
   border: 1px solid #ccc;
   padding: 10px;
-  float: left;
-  margin-right: 20px;
 }
 
 .membre img {
@@ -123,44 +187,32 @@ p {
   margin-bottom: 10px;
 }
 
-.texte-membre {
-  text-align: left; /* Ajuster l'alignement du texte si besoin */
-}
-
-.texte-membre h3 {
+.membre h3 {
   margin-top: 0;
 }
 
+
 /* AGENDA */
-
-.thumbnails-agenda {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  gap: 2vw;
-}
-
-.thumbnail-agenda {
-  width: 30%;
-  height: auto;
-}
-
-.thumbnail-image {
+.thumbnail-agenda img {
   width: 100%;
   height: auto;
 }
 
-.thumbnail-title {
+.thumbnail-agenda .title {
   font-weight: bold;
 }
 
 /* FOOTER */
 
 footer {
-  text-align: center; /* centre le footer horizontalement */
+  text-align: center;
+  /* centre le footer horizontalement */
   color: #ddd;
   background-color: #005d71;
-  border-bottom: 0; /* supprime la bordure du bas */
-  border-right: 0; /* supprime la bordure de droite */
-  overflow: hidden; /* Ajoute la propriété clearfix */
+  border-bottom: 0;
+  /* supprime la bordure du bas */
+  border-right: 0;
+  /* supprime la bordure de droite */
+  overflow: hidden;
+  /* Ajoute la propriété clearfix */
 }
