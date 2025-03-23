@@ -2,11 +2,11 @@
 # HEADER
 # GLOBAL PROPERTIES
 # NAVIGATION
+# MADE IN ANGERS
 # MEMBRES
-# agenda
-# footer
+# AGENDA
+# FOOTER
 */
-
 
 html {
   scroll-behavior: smooth;
@@ -51,7 +51,7 @@ body {
   display: none;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1000px) {
   #menu-dropdown {
     display: block;
   }
@@ -87,7 +87,7 @@ body {
 }
 
 
-@media (max-width: 768px) {
+@media (max-width: 1000px) {
   nav {
     display: none;
   }
