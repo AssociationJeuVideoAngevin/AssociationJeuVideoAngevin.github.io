@@ -173,7 +173,63 @@ hr {
   border-bottom: 5px solid #000;
 }
 
+/* MADE IN ANGERS */
+#made-in-angers {
+  margin-top: 60px;
+}
 
+.carousel {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  gap: 20px;
+  padding-block: 10px;
+  padding-inline: 5px;
+  scroll-behavior: smooth;
+}
+
+.creator-card {
+  flex: 0 0 auto;
+  scroll-snap-align: start;
+  background: #f8f8f8;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  width: 640px;
+  max-width: 90vw;
+}
+
+.creator-card img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 10px 10px 0 0;
+  object-fit: cover;
+}
+
+.creator-info {
+  padding: 15px;
+  text-align: left;
+}
+
+.creator-info h3 {
+  margin: 0;
+  font-size: 1.2rem;
+}
+
+.creator-info p {
+  margin: 5px 0;
+  font-size: 0.95rem;
+  line-height: 1.4;
+}
+
+.creator-info a {
+  color: #005d71;
+  text-decoration: none;
+}
+
+.creator-info a:hover {
+  text-decoration: underline;
+}
 
 /* MEMBRES */
 .membre {
