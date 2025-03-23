@@ -178,30 +178,36 @@ hr {
   margin-top: 60px;
 }
 
-.carousel {
+.carousel-wrapper {
+  position: relative;
   display: flex;
-  overflow-x: auto;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  margin-block: 40px;
+}
+
+.carousel-track {
+  display: flex;
+  transition: transform 0.3s ease-in-out;
   scroll-snap-type: x mandatory;
-  gap: 20px;
-  padding-block: 10px;
-  padding-inline: 5px;
-  scroll-behavior: smooth;
+  overflow-x: hidden;
+  width: 100%;
+  max-width: 700px;
 }
 
 .creator-card {
-  flex: 0 0 auto;
+  flex: 0 0 100%;
   scroll-snap-align: start;
   background: #f8f8f8;
   border-radius: 10px;
   box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-  width: 640px;
-  max-width: 90vw;
+  margin: 0 10px;
 }
 
 .creator-card img {
   width: 100%;
   height: auto;
-  display: block;
   border-radius: 10px 10px 0 0;
   object-fit: cover;
 }
@@ -229,6 +235,42 @@ hr {
 
 .creator-info a:hover {
   text-decoration: underline;
+}
+
+.carousel-arrow {
+  background-color: #005d71;
+  color: white;
+  border: none;
+  font-size: 2rem;
+  padding: 10px 15px;
+  cursor: pointer;
+  z-index: 2;
+  transition: background 0.3s;
+}
+
+.carousel-arrow:hover {
+  background-color: #003d4d;
+}
+
+.carousel-arrow.left {
+  position: absolute;
+  left: 0;
+}
+
+.carousel-arrow.right {
+  position: absolute;
+  right: 0;
+}
+
+@media (max-width: 768px) {
+  .carousel-track {
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+  }
+
+  .carousel-arrow {
+    display: none;
+  }
 }
 
 /* MEMBRES */
