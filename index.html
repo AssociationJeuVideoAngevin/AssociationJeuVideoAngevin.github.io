@@ -78,28 +78,34 @@
             <h1>Made in Angers</h1>
             <hr><br>
         
-            <div class="carousel">
-                <!-- Jeu 1 -->
-                <div class="creator-card">
-                    <img src="static/images/createurs/espace_from_norwood-640x280.jpg" alt="Escape from Norwood">
-                    <div class="creator-info">
-                        <h3>Escape from Norwood</h3>
-                        <p><a href="https://escapefromnorwood.com/" target="_blank">Singular Works</a></p>
-                        <p>Un jeu narratif envoûtant mêlant énigmes et exploration dans un monde mystérieux.</p>
+            <div class="carousel-wrapper">
+                <button class="carousel-arrow left" onclick="scrollCarousel(-1)">&#8249;</button>
+            
+                <div class="carousel-track" id="carousel-track">
+                    <!-- Jeu 1 -->
+                    <div class="creator-card">
+                        <img src="static/images/createurs/espace_from_norwood-640x280.jpg" alt="Escape from Norwood">
+                        <div class="creator-info">
+                            <h3>Escape from Norwood</h3>
+                            <p><a href="https://escapefromnorwood.com/" target="_blank">Singular Works</a></p>
+                            <p>Un jeu narratif envoûtant mêlant énigmes et exploration dans un monde mystérieux.</p>
+                        </div>
                     </div>
-                </div>
-        
-                <!-- Jeu 2 -->
-                <div class="creator-card">
-                    <img src="static/images/createurs/Hey_Cerise_Fan_Art-1280x560.png" alt="Hey Cerise">
-                    <div class="creator-info">
-                        <h3>Hey Cerise</h3>
-                        <p>Aurel</p>
-                        <p>De petites quêtes légères et amusantes pour aider Cerise dans sa maison tout droit sortie d'un dessin animé. Mais voilà... tout bascule.</p>
+            
+                    <!-- Jeu 2 -->
+                    <div class="creator-card">
+                        <img src="static/images/createurs/Hey_Cerise_Fan_Art-1280x560.png" alt="Hey Cerise">
+                        <div class="creator-info">
+                            <h3>Hey Cerise</h3>
+                            <p>Aurel</p>
+                            <p>De petites quêtes légères et amusantes pour aider Cerise dans sa maison tout droit sortie d'un dessin animé. Mais voilà... tout bascule.</p>
+                        </div>
                     </div>
+            
+                    <!-- Ajoute ici les autres jeux -->
                 </div>
-        
-                <!-- Duplique ces blocs pour les autres jeux -->
+            
+                <button class="carousel-arrow right" onclick="scrollCarousel(1)">&#8250;</button>
             </div>
         </section>
         
