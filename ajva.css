@@ -274,20 +274,59 @@ hr {
 }
 
 /* MEMBRES */
-.membre {
-  border: 1px solid #ccc;
-  padding: 10px;
+.member-card {
+  border-radius: 10px;
+  overflow: hidden;
+  border: 1px solid #e0e0e0;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: column;
 }
 
-.membre img {
+.member-card img {
   width: 100%;
-  height: auto;
-  margin-bottom: 10px;
+  aspect-ratio: 1;
+  object-fit: cover;
 }
 
-.membre h3 {
-  margin-top: 0;
+.member-card .content {
+  padding: 15px;
+  background: #f8f8f8;
+  height: 100%;
 }
+
+.member-card .content .tag{
+  padding: 4px 12px;
+  font-size: 14px;
+  width: fit-content;
+  color: #005d71;
+  background-color: #005d7130;
+  border-radius: 1000px;
+}
+
+.member-card .content .name{
+  font-size: 20px;
+  font-weight: 700;
+  margin-top: 10px;
+}
+
+.member-card .content .job{
+  margin-top: 5px;
+  color: #005d71;
+}
+
+.member-card .content .description{
+  margin-top: 15px;
+}
+
+
+
+
+
+.member-card .content p{
+  margin: 0px;
+}
+
 
 
 /* AGENDA */
