@@ -3,8 +3,9 @@
 # GLOBAL PROPERTIES
 # NAVIGATION
 # MADE IN ANGERS
-# MEMBRES
+# TEAM
 # AGENDA
+# MEMBERS
 # FOOTER
 */
 
@@ -273,61 +274,73 @@ hr {
   }
 }
 
-/* MEMBRES */
-.member-card {
-  border-radius: 10px;
-  overflow: hidden;
-  border: 1px solid #e0e0e0;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
-  display: flex;
-  flex-direction: column;
+/* TEAMS */
+#team-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 20px;
 }
 
-.member-card img {
+.team-card {
+  position: relative;
+  border-radius: 10px;
+  overflow: hidden;
+  background: #005d71;
+  color: white;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  cursor: pointer;
+}
+
+.team-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+}
+
+.card-image {
+  position: relative;
+  height: 250px;
+  overflow: hidden;
+}
+
+.card-image img {
   width: 100%;
-  aspect-ratio: 1;
+  height: 100%;
   object-fit: cover;
 }
 
-.member-card .content {
+.badge {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background: #ffffff;
+  color: #005d71;
+  padding: 5px 10px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.card-body {
   padding: 15px;
-  background: #f8f8f8;
-  height: 100%;
 }
 
-.member-card .content .tag{
-  padding: 4px 12px;
+.name {
+  font-weight: bold;
+  font-size: 16px;
+  margin-bottom: 5px;
+}
+
+.description {
   font-size: 14px;
-  width: fit-content;
-  color: #005d71;
-  background-color: #005d7130;
-  border-radius: 1000px;
+  opacity: 0;
+  max-height: 0;
+  transition: all 0.3s ease;
 }
 
-.member-card .content .name{
-  font-size: 20px;
-  font-weight: 700;
-  margin-top: 10px;
+.team-card:hover .description {
+  opacity: 1;
+  max-height: 250px;
 }
-
-.member-card .content .job{
-  margin-top: 5px;
-  color: #005d71;
-}
-
-.member-card .content .description{
-  margin-top: 15px;
-}
-
-
-
-
-
-.member-card .content p{
-  margin: 0px;
-}
-
-
 
 /* AGENDA */
 .thumbnail-agenda img {
@@ -337,6 +350,115 @@ hr {
 
 .thumbnail-agenda .title {
   font-weight: bold;
+}
+
+
+/* MEMBERS*/
+
+#members-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+.member-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+  cursor: pointer;
+  text-align: center;
+  font-size: 0.9rem;
+  box-sizing: border-box;
+}
+
+.card-image {
+  position: relative;
+  width: 100%;
+  height: 0;
+  padding-bottom: 90%;
+}
+
+.card-image img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.member-badge {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background: #005d71;
+  color: #ffffff;
+  padding: 5px 10px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.card-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.7);
+  color: #fff;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 8px;
+  text-align: center;
+  box-sizing: border-box;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+.member-card:hover .card-overlay {
+  opacity: 1;
+}
+
+.member-name {
+  font-weight: bold;
+  margin-top: 6px;
+  font-size: 0.95rem;
+  color: #000;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+.member-description {
+  font-size: 0.85rem;
+  margin-bottom: 6px;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+.member-links a {
+  color: #005d71;
+  text-decoration: none;
+  margin: 2px 4px;
+  padding: 4px 8px;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 6px;
+  font-size: 0.8rem;
+  transition: background-color 0.2s ease;
+}
+
+.member-links a:hover {
+  background-color: rgba(255, 255, 255, 1);
+  text-decoration: none;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 12px;
 }
 
 /* FOOTER */

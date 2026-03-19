@@ -20,9 +20,10 @@
                 <div id="dropdown-content" onclick="updateDropDownVisibility('dropdown-content', false)">
                     <a href="#association"><p>L'association</p></a>
                     <a href="#made-in-angers"><p>Made in Angers</p></a>
-                    <!--a href="#bureau"><p>Le bureau</p></a-->
+                    <a href="#bureau"><p>Le bureau</p></a>
                     <!--a href="#agenda"><p>Nous rencontrer</p></a-->
                     <a href="#calendar"><p>L'agenda</p></a>
+                    <a href="#members">Adhérent.es</a>
                     <a href="#contact"><p>Contact</p></a>
                 </div>
             </div>
@@ -33,9 +34,10 @@
             <nav>
                 <a href="#association">L'association</a>
                 <a href="#made-in-angers">Made in Angers</a>
-                <!--a href="#bureau">Le bureau</a-->
+                <a href="#bureau">Le bureau</a>
                 <!--a href="#agenda">Nous rencontrer</a-->
                 <a href="#calendar">L'agenda</a>
+                <a href="#members">Adhérent.es</a>
                 <a href="#contact">Contact</a>
             </nav>
             <div class="social">
@@ -182,39 +184,42 @@
                 </div>
             </div>
         </div-->
-         
-        <!--div id="bureau">
+        <section id="bureau">
             <h1>Le bureau</h1>
 
             <hr><br>
-            <div id="team-container" class="grid">
-                <div class="member-card">
-                    <img src="./static/images/bureau/portrait_Laura_bécognée.png"/>
-                    <div class="content">
-                        <div class="tag">Présidente</div>
-                        <p class="name">Bécognée Laura</p>
-                        <p class="description">Développeuse de jeux vidéos, patrone du studio Ours Agile</p>
-                    </div>
-                  </div>
-                  <div class="member-card">
-                    <img src="./static/images/bureau/Portrait_Jonathan_bulteau.png"/>
-                    <div class="content">
-                        <div class="tag">Trésorier</div>
-                        <p class="name">Jonathan Bulteau</p>
-                        <p class="description">Développeur de jeux vidéos, dirigeant du studio GluttonStones</p>
-                    </div>
-                  </div>
-                  <div class="member-card">
-                    <img src="./static/images/bureau/portrait_jean_phillipe_schnée.jpg"/>
-                    <div class="content">
-                        <div class="tag">Secrétaire</div>
-                        <p class="name">Jean-Phillipe Schnée</p>
-                        <p class="description">Traducteur de jeux vidéos, investi dans plusieurs associations locales</p>
-                    </div>
-                  </div>
 
-            </div>
-        </div-->
+            <div id="team-container" class="grid"></div>
+
+            <script>
+                fetch('./static/Data/team.json')
+                    .then(response => response.json())
+                    .then(data => {
+                        const container = document.getElementById('team-container');
+
+                        data.forEach(member => {
+                            const card = document.createElement('div');
+                            card.className = 'team-card';
+
+                            card.innerHTML = `
+    <div class="card-image">
+            <img src="${member.image || './static/images/bureau/user_icon.png'}" alt="${member.name}" />
+        ${member.role && member.role.trim() !== ''
+                                ? `<div class="badge">${member.role}</div>`
+                                : ''}
+    </div>
+
+    <div class="card-body">
+        <p class="name">${member.name}</p>
+        ${member.description ? `<p class="description">${member.description}</p>` : ''}
+    </div>
+`;
+                            container.appendChild(card);
+                        });
+                    })
+                    .catch(error => console.error('Erreur chargement JSON:', error));
+            </script>
+        </section>
         
         <section id="calendar">
             <h1>L'agenda</h1>
@@ -223,6 +228,49 @@
 
             <iframe width="100%" height="1000" style="border:none;" src="https://ajva.frama.space/apps/calendar/embed/2jgikHsrqkSMrNgg"></iframe>
 
+        </section>
+        
+        <section id="members">
+            <h1>Nos Adhérent.es</h1>
+
+            <hr><br>
+
+            <div id="members-container" class="grid"></div>
+
+            <script>
+                fetch('./static/Data/member.json')
+                    .then(response => response.json())
+                    .then(data => {
+                        const container = document.getElementById('members-container');
+
+                        function createCard(member) {
+                            const card = document.createElement('div');
+                            card.className = 'member-card';
+
+                            const links = [];
+                            if (member.links.website) links.push(`<a href="${member.links.website}" target="_blank">Site</a>`);
+                            if (member.links.twitch) links.push(`<a href="${member.links.twitch}" target="_blank">Twitch</a>`);
+                            if (member.links.youtube) links.push(`<a href="${member.links.youtube}" target="_blank">YouTube</a>`);
+
+                            card.innerHTML = `
+<div class="card-image">
+    <img src="${member.image || './static/images/bureau/user_icon.png'}" alt="${member.name}" />
+    ${member.role ? `<span class="member-badge">${member.role}</span>` : ''}
+    <div class="card-overlay">
+        ${member.description ? `<p class="member-description">${member.description}</p>` : ''}
+        ${links.length ? `<p class="member-links">${links.join(' | ')}</p>` : ''}
+    </div>
+</div>
+<p class="member-name">${member.name}</p>
+`;
+
+                            return card;
+                        }
+
+                        data.forEach(member => container.appendChild(createCard(member)));
+                    })
+                    .catch(error => console.error('Erreur chargement JSON:', error));
+            </script>
         </section>
 
         <section id="contact">

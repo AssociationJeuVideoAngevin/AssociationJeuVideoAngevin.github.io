@@ -1,0 +1,14 @@
+﻿[
+  {
+    "name": "Jonathan Bulteau",
+    "role": "Président",
+    "description": "Développeur de jeux vidéos, dirigeant du studio GluttonStones",
+    "image": "./static/images/bureau/Portrait_Jonathan_bulteau.png"
+  },
+  {
+    "name": "Cyril / Boodbarbak",
+    "role": "",
+    "description": "Joueur de jeux coop, multijoueurs et musicaux, développeur de jeux et mangeur de burgers et de pizzas.",
+    "image": "./static/images/bureau/Portrait_Team_CA.png"
+  }
+]

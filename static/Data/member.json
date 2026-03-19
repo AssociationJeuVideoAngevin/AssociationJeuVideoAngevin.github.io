@@ -1,0 +1,24 @@
+﻿[
+    {
+      "name": "Alice Dupont",
+      "description": "Développeuse indie passionnée de RPG.",
+      "role" : "Createur.ice",
+      "image": "",
+      "links": {
+        "website": "....",
+        "twitch": "....",
+        "youtube": ""
+      }
+    },
+    {
+      "name": "Bob Martin",
+      "description": "Streamer et créateur de vidéos sur l'histoire du jeu vidéo.",
+      "role": "Développeur.euse",
+      "image": "",
+      "links": {
+        "website": "",
+        "twitch": "....",
+        "youtube": "...."
+      }
+    }
+  ]
