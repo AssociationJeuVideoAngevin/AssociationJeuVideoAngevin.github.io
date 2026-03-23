@@ -1,7 +1,7 @@
 ﻿[
     {
       "name": "Alice Dupont",
-      "description": "Développeuse indie passionnée de RPG.",
+      "description": "Développeuse",
       "role" : "Createur.ice",
       "image": "",
       "links": {
@@ -12,7 +12,7 @@
     },
     {
       "name": "Bob Martin",
-      "description": "Streamer et créateur de vidéos sur l'histoire du jeu vidéo.",
+      "description": "Streamer et créateur de vidéos",
       "role": "Développeur.euse",
       "image": "",
       "links": {

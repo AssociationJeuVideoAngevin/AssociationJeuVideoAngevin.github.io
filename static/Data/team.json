@@ -10,5 +10,11 @@
     "role": "",
     "description": "Joueur de jeux coop, multijoueurs et musicaux, développeur de jeux et mangeur de burgers et de pizzas.",
     "image": "./static/images/bureau/Portrait_Team_CA.png"
+  },
+  {
+    "name": "Lisa Hersant",
+    "role": "",
+    "description": "Développeuse de Jeux Vidéo.",
+    "image": "./static/images/bureau/Portrait_Lisa_Hersant.jpg"
   }
 ]

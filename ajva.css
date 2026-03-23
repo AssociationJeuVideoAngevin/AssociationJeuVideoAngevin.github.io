@@ -11,19 +11,13 @@
 
 html {
   scroll-behavior: smooth;
-  font-family: "ObjectSans", Sans-serif;
+  font-family: "ObjectSans", sans-serif;
   font-size: 18px;
 }
 
 body {
   margin: 0;
   padding: 0;
-}
-
-.grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 25px;
 }
 
 .text-center {
@@ -76,7 +70,6 @@ body {
   z-index: 3;
 }
 
-
 #dropdown-content a {
   padding: 1px 20px;
   text-decoration: none;
@@ -86,7 +79,6 @@ body {
 #dropdown-content a:hover {
   background-color: gainsboro;
 }
-
 
 @media (max-width: 1000px) {
   nav {
@@ -139,7 +131,6 @@ header {
 
 .social a {
   font-size: inherit;
-
 }
 
 /* NAVIGATION */
@@ -178,7 +169,7 @@ main {
 
 h1 {
   text-align: center;
-  font-family: "Montserrat", Sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-size: 50px;
 }
 
@@ -288,23 +279,21 @@ hr {
 }
 
 /* TEAMS */
-#team-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-  gap: 20px;
-}
 
 .team-card {
+  height:320px;
   position: relative;
   border-radius: 10px;
   overflow: hidden;
   background: #005d71;
   color: white;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  transition: 0.2s ease;
   cursor: pointer;
+  padding-bottom: 20px;
 }
 
 .team-card:hover {
+  height:fit-content;
   transform: translateY(-5px);
   box-shadow: 0 10px 25px rgba(0,0,0,0.3);
 }
@@ -313,6 +302,8 @@ hr {
   position: relative;
   height: 250px;
   overflow: hidden;
+  margin: 10px;
+  border-radius: 5px;
 }
 
 .card-image img {
@@ -347,12 +338,13 @@ hr {
   font-size: 14px;
   opacity: 0;
   max-height: 0;
+  margin: 0;
   transition: all 0.3s ease;
 }
 
 .team-card:hover .description {
   opacity: 1;
-  max-height: 250px;
+  max-height: fit-content;
 }
 
 /* AGENDA */
@@ -368,35 +360,15 @@ hr {
 
 /* MEMBERS*/
 
-#members-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-  gap: 20px;
-}
-
 .member-card {
   position: relative;
   overflow: hidden;
   border-radius: 8px;
+  background: #d5d5d5;
   cursor: pointer;
   text-align: center;
   font-size: 0.9rem;
   box-sizing: border-box;
-}
-
-.card-image {
-  position: relative;
-  width: 100%;
-  height: 0;
-  padding-bottom: 90%;
-}
-
-.card-image img {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
 }
 
 .member-badge {
@@ -470,8 +442,8 @@ hr {
 
 .grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-  gap: 12px;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 20px;
 }
 
 /* FOOTER */
