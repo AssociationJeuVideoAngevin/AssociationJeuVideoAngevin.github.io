@@ -12,229 +12,126 @@
 </head>
 
 <body>
-    <header>
-        <div class="navbar">
+<header>
+    <div class="navbar">
 
-            <div id="menu-dropdown" onmouseleave="updateDropDownVisibility('dropdown-content', false)">
-                <i id="menu-dropdown-activator" class="fa-solid fa-bars clickable" onclick="updateDropDownVisibility('dropdown-content', true)"></i>
-                <div id="dropdown-content" onclick="updateDropDownVisibility('dropdown-content', false)">
-                    <a href="#association"><p>L'association</p></a>
-                    <a href="#made-in-angers"><p>Made in Angers</p></a>
-                    <a href="#bureau"><p>Le CA</p></a>
-                    <!--a href="#agenda"><p>Nous rencontrer</p></a-->
-                    <a href="#calendar"><p>L'agenda</p></a>
-                    <a href="#members">Adhérent.es</a>
-                    <a href="#contact"><p>Contact</p></a>
-                </div>
-            </div>
-
-            <a href="#">
-                <img src="./static/images/full_logo_with_text_ajva_1920.png" alt="Logo" class="logo">
-            </a>
-            <nav>
-                <a href="#association">L'association</a>
-                <a href="#made-in-angers">Made in Angers</a>
-                <a href="#bureau">Le CA</a>
-                <!--a href="#agenda">Nous rencontrer</a-->
-                <a href="#calendar">L'agenda</a>
+        <div id="menu-dropdown" onmouseleave="updateDropDownVisibility('dropdown-content', false)">
+            <i id="menu-dropdown-activator" class="fa-solid fa-bars clickable" onclick="updateDropDownVisibility('dropdown-content', true)"></i>
+            <div id="dropdown-content" onclick="updateDropDownVisibility('dropdown-content', false)">
+                <a href="#association"><p>L'association</p></a>
+                <a href="#made-in-angers"><p>Made in Angers</p></a>
+                <a href="#bureau"><p>Le CA</p></a>
+                <!--a href="#agenda"><p>Nous rencontrer</p></a-->
+                <a href="#calendar"><p>L'agenda</p></a>
                 <a href="#members">Adhérent.es</a>
-                <a href="#contact">Contact</a>
-            </nav>
-            <div class="social">
-                <a href="https://discord.gg/MAqysMSsG8">
-                    <img src="static/images/logo_discord.png" alt="Discord" class="social-network-btn clickable">
-                </a>
-                <a href="https://bsky.app/profile/ajva.bsky.social">
-                    <img src="./static/images/bluesky_media_kit_logo_2.png" alt="Bluesky"
-                        class="social-network-btn clickable">
-                </a>
-                <a href="https://mastodon.social/@ajva">
-                    <img src="./static/images/logo_mastodon_128.png" alt="Mastodon"
-                        class="social-network-btn clickable">
-                </a>
+                <a href="#contact"><p>Contact</p></a>
             </div>
         </div>
-    </header>
-    <main>
-        <section id="association" class="section-anchor">
-            <h1>L'association</h1>
-            <hr><br>
 
-            <p class="text-center">Promouvoir le jeu vidéo à Angers et tisser des liens entre les créateurs et créatrices de jeux angevins et les communautés de joueurs et joueuses présents à Angers, c'est ça qui nous anime.
-                <br><br>
-                Fondée en 2025 à Angers, notre association est à la recherche de nouveaux membres. Que vous soyez intéressés par la création de jeux, que vous aimiez simplement y jouer, ou que vous soyez une structure intéressée par le media: rejoignez-nous ! 
-                <br><br>
-                En intégrant l'association, vous pourrez participer à des évènements autour du jeu, rencontrer d'autres passionnés, bénéficier de nos connaissances sur le média à Angers et en général, trouver des créateurs et créatrices, discuter de votre passion, etc.
-                <br><br>
-        </section>
-
-        <section id="made-in-angers" class="section-anchor">
-            <h1>Made in Angers</h1>
-            <hr><br>
-        
-            <div class="carousel-wrapper">
-                <button class="carousel-arrow left" onclick="scrollCarousel(-1)">&#8249;</button>
-            
-                <div class="carousel-track" id="carousel-track">
-                    <div class="creator-card">
-                        <a href="https://escapefromnorwood.com/" target="_blank"><img src="static/images/createurs/espace_from_norwood-640x280.jpg" alt="Escape from Norwood"></a>
-                        <div class="creator-info">
-                            <h3>Escape from Norwood</h3>
-                            <p><a href="https://escapefromnorwood.com/" target="_blank">Singular Works</a></p>
-                            <p>Un jeu narratif envoûtant mêlant énigmes et exploration dans un monde mystérieux.</p>
-                        </div>
-                    </div>
-
-                    <div class="creator-card">
-                        <a href="https://ours-agile.itch.io/banana-man-the-space-monkeys" target="_blank"><img src="static/images/createurs/banana_man_1280x560.png" alt="Banana Man"></a>
-                        <div class="creator-info">
-                            <h3>Banana Man : The Space Monkeys</h3>
-                            <p><a href="https://ours-agile.itch.io/banana-man-the-space-monkeys" target="_blank">Ours Agile</a></p>
-                            <p>Dans un monde d'hommes-singes, vous êtes un homme-banane luttant pour survivre dans une station spatiale.</p>
-                        </div>
-                    </div>
-
-                    <div class="creator-card">
-                        <img src="static/images/createurs/Hey_Cerise_Fan_Art-1280x560.png" alt="Hey Cerise">
-                        <div class="creator-info">
-                            <h3>Hey Cerise</h3>
-                            <p>Aurel</p>
-                            <p>De petites quêtes légères et amusantes pour aider Cerise dans sa maison tout droit sortie d'un dessin animé. Mais voilà... tout bascule.</p>
-                        </div>
-                    </div>
-
-                    <div class="creator-card">
-                        <a href="https://apps.apple.com/fr/app/pac-man-party-royale/id1465543094" target="_blank"><img src="static/images/createurs/Pac-Man Party Royal_640x280.png" alt="Pac-Man Party Royal"></a>
-                        <div class="creator-info">
-                            <h3>Pac-Man Party Royal</h3>
-                            <p><a href="https://apps.apple.com/fr/app/pac-man-party-royale/id1465543094" target="_blank">Oktopus</a></p>
-                            <p>Le jeu rétro multijoueur</p>
-                        </div>
-                    </div>
-
-                    <div class="creator-card">
-                        <a href="https://store.steampowered.com/app/357720/Inside_My_Radio/" target="_blank"><img src="static/images/createurs/InsideMyRadio_640x280.jpg" alt="Inside My Radio"></a>
-                        <div class="creator-info">
-                            <h3>Inside My Radio</h3>
-                            <p><a href="https://store.steampowered.com/app/357720/Inside_My_Radio/" target="_blank">Seaven Studio</a></p>
-                            <p>Arriverez-vous à tenir le rythme? Vivez une aventure au sein d'un Boombox en péril et jouez à l'expérience musicale ultime.</p>
-                        </div>
-                    </div>
-                    
-                    <div class="creator-card">
-                        <img src="static/images/createurs/Versus Snake_1280x560.png" alt="Versus Snake">
-                        <div class="creator-info">
-                            <h3>Versus Snake</h3>
-                            <p>Kanapech</p>
-                            <p>Un petit party-game basé sur Snake / Tron</p>
-                        </div>
-                    </div>
-
-                    <div class="creator-card">
-                        <a href="https://store.steampowered.com/app/3237030/Black_Zen_White/?l=french" target="_blank"><img src="static/images/createurs/blackzenwhite_640x280.jpg" alt="Black Zen White"></a>
-                        <div class="creator-info">
-                            <h3>Black Zen White</h3>
-                            <p><a href="https://store.steampowered.com/app/3237030/Black_Zen_White/?l=french" target="_blank">24m² Studio</a></p>
-                            <p>Un jeu de plateforme et de réflexion où le monde alterne toutes les 10 secondes entre deux versions : noir puis blanc</p>
-                        </div>
-                    </div>
-
-                    <div class="creator-card">
-                        <a href="https://kugle.app/" target="_blank"><img src="static/images/createurs/kugle-o377o_1280x560.png" alt="Kugle"></a>
-                        <div class="creator-info">
-                            <h3>Kugle</h3>
-                            <p><a href="https://kugle.app/" target="_blank">KugleCorp</a></p>
-                            <p>Entrez dans un monde animé où vous pouvez collectionner, élever et échanger de petites créatures vibrantes appelées Kugles</p>
-                        </div>
-                    </div>
-                    
-                    <!-- Ajouter ici les autres jeux -->
-                </div>
-            
-                <button class="carousel-arrow right" onclick="scrollCarousel(1)">&#8250;</button>
-            </div>
-        </section>
-        
-        <!--div id="agenda">
-            <h1>L'association sera présente</h1>
-
-            <hr><br>
-            <div class="grid">
-                <div class="thumbnail-agenda">
-                    <a href="https://paysdelaloire.centres-sociaux.fr/2024/12/19/save-the-date-anjou-games-day-2/">
-                        <img src="static/images/thumbnail_mediatheque_avrille.png">
-                    </a>
-                    <a
-                        href="https://paysdelaloire.centres-sociaux.fr/2024/12/19/save-the-date-anjou-games-day-2/">
-                    </a>
-                    <p class="title">L'Anjou Games Day</p>
-                    <p>Participation de l'AJVA (https://ajva.fr) à l'Anjou Games Day, un évènement important pour tous les acteurs du jeu. Venez nous rencontrer là bas.</p>
-                    <p>🗓️ Le 19 février de 13h30 à 18h00</p>
-                    <a href="https://maps.app.goo.gl/wShG13WeLm8UCzLa9">🗺️ Centre culturel Georges Brassens</a>
-                </div>
-
-                <div class="thumbnail-agenda">
-                    <a href="https://angersgeekfest.com/">
-                        <img src="static/images/AGF25-Affiche.png">
-                    </a>
-                    <p class="title">Angers Geek Fest 2025</p>
-                    <p><a href="https://angersgeekfest.com/">Angers Geek Fest</a> est un évènement massif 100% dédidé à la culture Geek. Nous y serons présents au côté d'autres associations et exposants du territoire</p>
-                    <p>🗓️ Le 5 et 6 avril</p>
-                    <a href="https://maps.app.goo.gl/VURft4AYdZQy2wqM6">🗺️ Parc des expositions</a>
-                </div>
-            </div>
-        </div-->
-        <section id="bureau" class="section-anchor">
-            <h1>Le conseil d'administration</h1>
-            <hr><br>
-            <div id="team-container" class="grid"></div>
-        </section>
-        
-        <section id="calendar" class="section-anchor">
-            <h1>L'agenda</h1>
-
-            <hr><br>
-
-            <iframe width="100%" height="1000" style="border:none;" src="https://ajva.frama.space/apps/calendar/embed/2jgikHsrqkSMrNgg"></iframe>
-
-        </section>
-
-        <section id="members" class="section-anchor">
-            <h1>Nos Adhérent.es</h1>
-            <hr><br>
-            <div id="members-container" class="grid"></div>
-        </section>
-
-        <section id="contact" class="section-anchor">
-            <h1>Contact</h1>
-
-            <hr><br>
-
-            <p class="text-center">
-                Commencez par poster un message sur notre <b><a href="https://discord.gg/MAqysMSsG8">discord</a></b> \o_
-            </p>
-            <p class="text-center">Vous pouvez aussi nous envoyer un mail à <a
-                    href="mailto:contact@ajva.fr"><b>contact@ajva.fr</b></a></p>
-
-        </section>
-    </main>
-    <footer>
-        <div class="social-media">
-            <h3>Suivez-nous sur les réseaux sociaux</h3>
-
+        <a href="#">
+            <img src="./static/images/full_logo_with_text_ajva_1920.png" alt="Logo" class="logo">
+        </a>
+        <nav>
+            <a href="#association">L'association</a>
+            <a href="#made-in-angers">Made in Angers</a>
+            <a href="#bureau">Le CA</a>
+            <!--a href="#agenda">Nous rencontrer</a-->
+            <a href="#calendar">L'agenda</a>
+            <a href="#members">Adhérent.es</a>
+            <a href="#contact">Contact</a>
+        </nav>
+        <div class="social">
             <a href="https://discord.gg/MAqysMSsG8">
                 <img src="static/images/logo_discord.png" alt="Discord" class="social-network-btn clickable">
             </a>
-            <a href="https://bsky.app/profile/ajva.bsky.social"><img src="./static/images/bluesky_media_kit_logo_2.png"
-                    class="social-network-btn clickable"></a>
-            <a href="https://mastodon.social/@ajva"><img src="./static/images/logo_mastodon_128.png" alt="Mastodon"
-                    class="social-network-btn clickable"></a>
+            <a href="https://bsky.app/profile/ajva.bsky.social">
+                <img src="./static/images/bluesky_media_kit_logo_2.png" alt="Bluesky"
+                     class="social-network-btn clickable">
+            </a>
+            <a href="https://mastodon.social/@ajva">
+                <img src="./static/images/logo_mastodon_128.png" alt="Mastodon"
+                     class="social-network-btn clickable">
+            </a>
+        </div>
+    </div>
+</header>
+<main>
+    <section id="association" class="section-anchor">
+        <h1>L'association</h1>
+        <hr><br>
+
+        <p class="text-center">Promouvoir le jeu vidéo à Angers et tisser des liens entre les créateurs et créatrices de jeux angevins et les communautés de joueurs et joueuses présents à Angers, c'est ça qui nous anime.
+            <br><br>
+            Fondée en 2025 à Angers, notre association est à la recherche de nouveaux membres. Que vous soyez intéressés par la création de jeux, que vous aimiez simplement y jouer, ou que vous soyez une structure intéressée par le media: rejoignez-nous !
+            <br><br>
+            En intégrant l'association, vous pourrez participer à des évènements autour du jeu, rencontrer d'autres passionnés, bénéficier de nos connaissances sur le média à Angers et en général, trouver des créateurs et créatrices, discuter de votre passion, etc.
+            <br><br>
+    </section>
+
+    <section id="made-in-angers" class="section-anchor">
+        <h1>Made in Angers</h1>
+        <hr><br>
+
+        <div class="carousel-wrapper">
+            <div class="carousel-track" id="carousel-track">
+                <!-- Les 3 cartes (précédente / active / suivante) sont injectées depuis static/Data/games.json -->
+            </div>
         </div>
 
-        <div class="copyright">
-            <p>&copy; 2024-2025 - Association du Jeu Vidéo Angevin - Tous droits réservés</p>
+        <div class="carousel-dots" id="carousel-dots">
+            <!-- Points de pagination générés dynamiquement -->
         </div>
-    </footer>
+    </section>
+
+    <section id="bureau" class="section-anchor">
+        <h1>Le conseil d'administration</h1>
+        <hr><br>
+        <div id="team-container" class="grid"></div>
+    </section>
+
+    <section id="calendar" class="section-anchor">
+        <h1>L'agenda</h1>
+
+        <hr><br>
+
+        <iframe width="100%" height="1000" style="border:none;" src="https://ajva.frama.space/apps/calendar/embed/2jgikHsrqkSMrNgg"></iframe>
+
+    </section>
+
+    <section id="members" class="section-anchor">
+        <h1>Nos Adhérent.es</h1>
+        <hr><br>
+        <div id="members-container" class="grid"></div>
+    </section>
+
+    <section id="contact" class="section-anchor">
+        <h1>Contact</h1>
+
+        <hr><br>
+
+        <p class="text-center">
+            Commencez par poster un message sur notre <b><a href="https://discord.gg/MAqysMSsG8">discord</a></b> \o_
+        </p>
+        <p class="text-center">Vous pouvez aussi nous envoyer un mail à <a
+                href="mailto:contact@ajva.fr"><b>contact@ajva.fr</b></a></p>
+
+    </section>
+</main>
+<footer>
+    <div class="social-media">
+        <h3>Suivez-nous sur les réseaux sociaux</h3>
+        <a href="https://discord.gg/MAqysMSsG8">
+            <img src="static/images/logo_discord.png" alt="Discord" class="social-network-btn clickable">
+        </a>
+        <a href="https://bsky.app/profile/ajva.bsky.social"><img src="./static/images/bluesky_media_kit_logo_2.png"
+                                                                 class="social-network-btn clickable"></a>
+        <a href="https://mastodon.social/@ajva"><img src="./static/images/logo_mastodon_128.png" alt="Mastodon"
+                                                     class="social-network-btn clickable"></a>
+    </div>
+    <div class="copyright">
+        <p>&copy; 2024-2025 - Association du Jeu Vidéo Angevin - Tous droits réservés</p>
+    </div>
+</footer>
 </body>
 
 </html>

@@ -1,14 +1,14 @@
 ﻿[
   {
-    "name": "Théo",
+    "name": "Théo Bonnaud",
     "role": "Président",
-    "description": "...",
-    "image": "./static/images/bureau/user_icon.png"
+    "description": "Passionné du dixième art, fou de dev, je m'amuse à faire pleins de trucs.",
+    "image": "./static/images/bureau/Portrait_Theo_Bonnaud.png"
   },
   {
     "name": "Jonathan Bulteau",
     "role": "Trésorier",
-    "description": "Développeur de jeux vidéos, dirigeant du studio GluttonStones",
+    "description": "Créateur de Jeux Vidéo et joueur.",
     "image": "./static/images/bureau/Portrait_Jonathan_bulteau.png"
   },
   {

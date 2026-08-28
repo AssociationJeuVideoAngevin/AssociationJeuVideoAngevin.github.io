@@ -6,14 +6,144 @@ function updateDropDownVisibility(id, visibility) {
     }
 }
 
-function scrollCarousel(direction) {
-    const track = document.getElementById('carousel-track');
-    const card = track.querySelector('.creator-card');
-    if (!card) return;
+// ======================
+// CAROUSEL (made in angers)
+// ======================
+let carouselCards = [];
+let carouselIndex = 0;
+let carouselTimer = null;
 
-    const scrollAmount = card.offsetWidth + 20; // includes margin
-    track.scrollBy({ left: direction * scrollAmount, behavior: 'smooth' });
+const CAROUSEL_AUTOPLAY_DELAY = 3000; // ms entre chaque slide auto
+
+function buildCarouselCard(game) {
+    const card = document.createElement('div');
+    card.className = 'creator-card';
+
+    const imageMarkup = `<img src="${game.img}" alt="${game.title}">`;
+    const imageBlock = game['link-game']
+        ? `<a href="${game['link-game']}" target="_blank">${imageMarkup}</a>`
+        : imageMarkup;
+
+    const creatorMarkup = game.creator
+        ? (game['link-creator']
+            ? `<p><a href="${game['link-creator']}" target="_blank">${game.creator}</a></p>`
+            : `<p>${game.creator}</p>`)
+        : '';
+
+    card.innerHTML = `
+        ${imageBlock}
+        <div class="creator-info">
+            <h3>${game.title}</h3>
+            ${creatorMarkup}
+            ${game.description ? `<p>${game.description}</p>` : ''}
+        </div>
+    `;
+
+    return card;
 }
+
+// Ne fait QUE déplacer/mettre à jour le style des cartes déjà présentes dans le DOM.
+// Aucune reconstruction de contenu ici : c'est ce qui rend le glissement fluide.
+function positionCarousel() {
+    const track = document.getElementById('carousel-track');
+    const wrapper = document.querySelector('.carousel-wrapper');
+    if (!track || !wrapper || !carouselCards.length) return;
+
+    const cardWidth = carouselCards[0].offsetWidth;
+    const gapValue = parseFloat(getComputedStyle(track).columnGap || getComputedStyle(track).gap) || 0;
+    const step = cardWidth + gapValue;
+    const wrapperWidth = wrapper.offsetWidth;
+    const centerOffset = (wrapperWidth - cardWidth) / 2;
+
+    track.style.transform = `translateX(${centerOffset - carouselIndex * step}px)`;
+
+    const total = carouselCards.length;
+    carouselCards.forEach((card, i) => {
+        let distance = i - carouselIndex;
+        if (distance > total / 2) distance -= total;
+        if (distance < -total / 2) distance += total;
+        card.classList.toggle('is-active', distance === 0);
+    });
+}
+
+function updateDots() {
+    const dotsContainer = document.getElementById('carousel-dots');
+    if (!dotsContainer) return;
+    dotsContainer.querySelectorAll('.carousel-dot').forEach((dot, i) => {
+        dot.classList.toggle('active', i === carouselIndex);
+    });
+}
+
+function goToSlide(index) {
+    const total = carouselCards.length;
+    if (!total) return;
+    carouselIndex = ((index % total) + total) % total;
+    positionCarousel();
+    updateDots();
+}
+
+function nextSlide() {
+    goToSlide(carouselIndex + 1);
+}
+
+function prevSlide() {
+    goToSlide(carouselIndex - 1);
+}
+
+function startCarouselAutoplay() {
+    stopCarouselAutoplay();
+    carouselTimer = setInterval(nextSlide, CAROUSEL_AUTOPLAY_DELAY);
+}
+
+function stopCarouselAutoplay() {
+    if (carouselTimer) {
+        clearInterval(carouselTimer);
+        carouselTimer = null;
+    }
+}
+
+function buildDots(games) {
+    const dotsContainer = document.getElementById('carousel-dots');
+    if (!dotsContainer) return;
+
+    dotsContainer.innerHTML = '';
+    games.forEach((game, i) => {
+        const dot = document.createElement('span');
+        dot.className = 'carousel-dot' + (i === carouselIndex ? ' active' : '');
+        dot.setAttribute('role', 'button');
+        dot.setAttribute('tabindex', '0');
+        dot.setAttribute('aria-label', `Voir ${game.title}`);
+        dot.addEventListener('click', () => {
+            goToSlide(i);
+            startCarouselAutoplay();
+        });
+        dotsContainer.appendChild(dot);
+    });
+}
+
+fetch('./static/Data/carousel.json')
+    .then(response => response.json())
+    .then(data => {
+        if (!data.length) return;
+
+        const track = document.getElementById('carousel-track');
+        const wrapper = document.querySelector('.carousel-wrapper');
+        if (!track || !wrapper) return;
+
+        track.innerHTML = '';
+        data.forEach(game => track.appendChild(buildCarouselCard(game)));
+        carouselCards = Array.from(track.children);
+
+        buildDots(data);
+        positionCarousel();
+        startCarouselAutoplay();
+
+        wrapper.addEventListener('mouseenter', stopCarouselAutoplay);
+        wrapper.addEventListener('mouseleave', startCarouselAutoplay);
+        window.addEventListener('resize', positionCarousel);
+    })
+    .catch(error => console.error('Erreur chargement carousel JSON:', error));
+
 
 // ======================
 // TEAM (bureau)

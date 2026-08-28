@@ -1,66 +1,66 @@
 ﻿[
   {
-    "title" : "Escape from Norwood",
-    "creator" : "Singular Works",
-    "link-creator" : "https://escapefromnorwood.com/",
-    "link-game" :  "https://escapefromnorwood.com/",
-    "img" : "static/images/createurs/espace_from_norwood-640x280.jpg",
-    "description" : "Un jeu narratif envoûtant mêlant énigmes et exploration dans un monde mystérieux."
+    "title": "Escape from Norwood",
+    "creator": "Singular Works",
+    "link-creator": "https://escapefromnorwood.com/",
+    "link-game": "https://escapefromnorwood.com/",
+    "img": "static/images/createurs/espace_from_norwood-640x280.jpg",
+    "description": "Un jeu narratif envoûtant mêlant énigmes et exploration dans un monde mystérieux."
   },
   {
-    "title" : "Banana Man : The Space Monkeys",
-    "creator" : "Ours Agile",
-    "link-creator" : "https://ours-agile.itch.io",
-    "link-game" :  "https://ours-agile.itch.io/banana-man-the-space-monkeys",
-    "img" : "static/images/createurs/banana_man_1280x560.png",
-    "description" : "Dans un monde d'hommes-singes, vous êtes un homme-banane luttant pour survivre dans une station spatiale."
+    "title": "Banana Man : The Space Monkeys",
+    "creator": "Ours Agile",
+    "link-creator": "https://ours-agile.itch.io",
+    "link-game": "https://ours-agile.itch.io/banana-man-the-space-monkeys",
+    "img": "static/images/createurs/banana_man_1280x560.png",
+    "description": "Dans un monde d'hommes-singes, vous êtes un homme-banane luttant pour survivre dans une station spatiale."
   },
   {
-    "title" : "Hey Cerise",
-    "creator" : "Aurel",
-    "link-creator" : "",
-    "link-game" :  "",
-    "img" : "static/images/createurs/Hey_Cerise_Fan_Art-1280x560.png",
-    "description" : "De petites quêtes légères et amusantes pour aider Cerise dans sa maison tout droit sortie d'un dessin animé. Mais voilà... tout bascule."
+    "title": "Hey Cerise",
+    "creator": "Aurel",
+    "link-creator": "",
+    "link-game": "",
+    "img": "static/images/createurs/Hey_Cerise_Fan_Art-1280x560.png",
+    "description": "De petites quêtes légères et amusantes pour aider Cerise dans sa maison tout droit sortie d'un dessin animé. Mais voilà... tout bascule."
   },
   {
-    "title" : "Pac-Man Party Royal",
-    "creator" : "Oktopus",
-    "link-creator" : "",
-    "link-game" :  "https://apps.apple.com/fr/app/pac-man-party-royale/id1465543094",
-    "img" : "static/images/createurs/Pac-Man Party Royal_640x280.png",
-    "description" : "Le jeu rétro multijoueur."
+    "title": "Pac-Man Party Royal",
+    "creator": "Oktopus",
+    "link-creator": "",
+    "link-game": "https://apps.apple.com/fr/app/pac-man-party-royale/id1465543094",
+    "img": "static/images/createurs/Pac-Man Party Royal_640x280.png",
+    "description": "Le jeu rétro multijoueur."
   },
   {
-    "title" : "Inside My Radio",
-    "creator" : "Seaven Studio",
-    "link-creator" : "",
-    "link-game" :  "https://store.steampowered.com/app/357720/Inside_My_Radio/",
-    "img" : "static/images/createurs/InsideMyRadio_640x280.jpg",
-    "description" : "Arriverez-vous à tenir le rythme? Vivez une aventure au sein d'un Boombox en péril et jouez à l'expérience musicale ultime."
+    "title": "Inside My Radio",
+    "creator": "Seaven Studio",
+    "link-creator": "",
+    "link-game": "https://store.steampowered.com/app/357720/Inside_My_Radio/",
+    "img": "static/images/createurs/InsideMyRadio_640x280.jpg",
+    "description": "Arriverez-vous à tenir le rythme? Vivez une aventure au sein d'un Boombox en péril et jouez à l'expérience musicale ultime."
   },
   {
-    "title" : "Versus Snake",
-    "creator" : "Kanapech",
-    "link-creator" : "",
-    "link-game" :  "",
-    "img" : "static/images/createurs/Versus Snake_1280x560.png",
-    "description" : "Un petit party-game basé sur Snake / Tron"
+    "title": "Versus Snake",
+    "creator": "Kanapech",
+    "link-creator": "",
+    "link-game": "",
+    "img": "static/images/createurs/Versus Snake_1280x560.png",
+    "description": "Un petit party-game basé sur Snake / Tron"
   },
   {
-    "title" : "Black Zen White",
-    "creator" : "24m² Studio",
-    "link-creator" : "",
-    "link-game" :  "https://store.steampowered.com/app/3237030/Black_Zen_White/?l=french",
-    "img" : "static/images/createurs/blackzenwhite_640x280.jpg",
-    "description" : "Un jeu de plateforme et de réflexion où le monde alterne toutes les 10 secondes entre deux versions : noir puis blanc"
+    "title": "Black Zen White",
+    "creator": "24m² Studio",
+    "link-creator": "",
+    "link-game": "https://store.steampowered.com/app/3237030/Black_Zen_White/?l=french",
+    "img": "static/images/createurs/blackzenwhite_640x280.jpg",
+    "description": "Un jeu de plateforme et de réflexion où le monde alterne toutes les 10 secondes entre deux versions : noir puis blanc"
   },
   {
-    "title" : "Kugle",
-    "creator" : "KugleCorp",
-    "link-creator" : "",
-    "link-game" :  "https://kugle.app/ ",
-    "img" : "static/images/createurs/kugle-o377o_1280x560.png",
-    "description" : "Entrez dans un monde animé où vous pouvez collectionner, élever et échanger de petites créatures vibrantes appelées Kugles"
+    "title": "Kugle",
+    "creator": "KugleCorp",
+    "link-creator": "",
+    "link-game": "https://kugle.app/",
+    "img": "static/images/createurs/kugle-o377o_1280x560.png",
+    "description": "Entrez dans un monde animé où vous pouvez collectionner, élever et échanger de petites créatures vibrantes appelées Kugles"
   }
 ]
