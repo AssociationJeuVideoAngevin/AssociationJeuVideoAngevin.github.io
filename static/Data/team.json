@@ -1,9 +1,21 @@
 ﻿[
   {
-    "name": "Jonathan Bulteau",
+    "name": "Théo",
     "role": "Président",
+    "description": "...",
+    "image": "./static/images/bureau/user_icon.png"
+  },
+  {
+    "name": "Jonathan Bulteau",
+    "role": "Trésorier",
     "description": "Développeur de jeux vidéos, dirigeant du studio GluttonStones",
     "image": "./static/images/bureau/Portrait_Jonathan_bulteau.png"
+  },
+  {
+    "name": "Fara",
+    "role": "Secrétaire",
+    "description": "...",
+    "image": "./static/images/bureau/user_icon.png"
   },
   {
     "name": "Cyril / Boodbarbak",
@@ -14,7 +26,7 @@
   {
     "name": "Lisa Hersant",
     "role": "",
-    "description": "Développeuse de Jeux Vidéo.",
+    "description": "Créatrice de Turtles Games, Développement de Jeux Vidéo sur Unity et Unreal Engine.",
     "image": "./static/images/bureau/Portrait_Lisa_Hersant.jpg"
   }
 ]

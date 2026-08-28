@@ -65,7 +65,13 @@ fetch('./static/Data/member.json')
             if (member.links.website) links.push(`<a href="${member.links.website}" target="_blank">Site</a>`);
             if (member.links.twitch) links.push(`<a href="${member.links.twitch}" target="_blank">Twitch</a>`);
             if (member.links.youtube) links.push(`<a href="${member.links.youtube}" target="_blank">YouTube</a>`);
-
+            if (member.links.games) {
+                member.links.games.forEach(game => {
+                    if (game.name && game.link) {
+                        links.push(`<a href="${game.link}" target="_blank">${game.name}</a>`);
+                    }
+                });
+            }
             card.innerHTML = `
                 <div class="card-image">
                     <img src="${member.image || './static/images/bureau/user_icon.png'}" alt="${member.name}" />

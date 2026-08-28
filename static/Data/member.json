@@ -1,24 +1,18 @@
 ﻿[
     {
-      "name": "Alice Dupont",
-      "description": "Développeuse",
-      "role" : "Createur.ice",
-      "image": "",
+      "name": "24m² Studio",
+      "description": "Petit studio d'un peu plus d'une personne qui fait des jeux vidéo pour le plaisir, bientôt pour la gloire et peut-être un jour pour gagner un peu d'argent.",
+      "role" : "Créateur",
+      "image": "./static/images/members/members_24m2studio_noir_blanc_2000x2000.png",
       "links": {
-        "website": "....",
-        "twitch": "....",
-        "youtube": ""
-      }
-    },
-    {
-      "name": "Bob Martin",
-      "description": "Streamer et créateur de vidéos",
-      "role": "Développeur.euse",
-      "image": "",
-      "links": {
-        "website": "",
-        "twitch": "....",
-        "youtube": "...."
+        "website": "https://24m2studio.com",
+        "games" :
+        [
+          {
+            "name" : "Black Zen White",
+            "link" : "https://24m2studio.com/black-zen-white"
+          }
+        ]
       }
     }
   ]

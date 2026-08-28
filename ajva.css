@@ -251,6 +251,7 @@ hr {
   cursor: pointer;
   z-index: 2;
   transition: background 0.3s;
+  border-radius: 10px;
 }
 
 .carousel-arrow:hover {
