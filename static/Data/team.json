@@ -12,10 +12,10 @@
     "image": "./static/images/bureau/Portrait_Jonathan_bulteau.png"
   },
   {
-    "name": "Fara",
+    "name": "Frangyne",
     "role": "Secrétaire",
-    "description": "...",
-    "image": "./static/images/bureau/user_icon.png"
+    "description": "Ludothécaire, je fais aussi partie de 24m2 Studio. J’aime principalement les jeux en coop mais toute découverte vidéoludique est toujours très chouette.",
+    "image": "./static/images/bureau/Portrait_Fara.jpg"
   },
   {
     "name": "Cyril / Boodbarbak",
@@ -28,5 +28,11 @@
     "role": "",
     "description": "Créatrice de Turtles Games, Développement de Jeux Vidéo sur Unity et Unreal Engine.",
     "image": "./static/images/bureau/Portrait_Lisa_Hersant.jpg"
+  },
+  {
+    "name": "El-lahiani Meihdi",
+    "role": "",
+    "description": "Hier, dans l’industrie du jeu vidéo. 🎮 \n Aujourd’hui, ça reste une passion. ✨ \n Je participe malgré tout à des game jams 🛠️🕹️ pour garder la flamme. 🔥",
+    "image": "./static/images/bureau/Portrait_Meihdi.jpg"
   }
 ]
