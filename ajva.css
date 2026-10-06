@@ -3,26 +3,21 @@
 # GLOBAL PROPERTIES
 # NAVIGATION
 # MADE IN ANGERS
-# MEMBRES
+# TEAM
 # AGENDA
+# MEMBERS
 # FOOTER
 */
 
 html {
   scroll-behavior: smooth;
-  font-family: "ObjectSans", Sans-serif;
+  font-family: "ObjectSans", sans-serif;
   font-size: 18px;
 }
 
 body {
   margin: 0;
   padding: 0;
-}
-
-.grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 25px;
 }
 
 .text-center {
@@ -71,10 +66,9 @@ body {
   position: absolute;
   background-color: white;
   min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-  z-index: 1;
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+  z-index: 3;
 }
-
 
 #dropdown-content a {
   padding: 1px 20px;
@@ -86,7 +80,6 @@ body {
   background-color: gainsboro;
 }
 
-
 @media (max-width: 1000px) {
   nav {
     display: none;
@@ -97,6 +90,19 @@ body {
 header {
   background-color: #005d71;
   color: #fff;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100px;
+  z-index: 2;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.section-anchor::before {
+  content: "";
+  display: block;
+  height: 100px;
 }
 
 .navbar {
@@ -125,7 +131,6 @@ header {
 
 .social a {
   font-size: inherit;
-
 }
 
 /* NAVIGATION */
@@ -164,7 +169,7 @@ main {
 
 h1 {
   text-align: center;
-  font-family: "Montserrat", Sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-size: 50px;
 }
 
@@ -180,29 +185,65 @@ hr {
 
 .carousel-wrapper {
   position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   overflow: hidden;
   margin-block: 40px;
+  padding-block: 20px;
+  max-width: 800px;
+  margin-inline: auto;
 }
 
 .carousel-track {
   display: flex;
-  transition: transform 0.3s ease-in-out;
-  scroll-snap-type: x mandatory;
-  overflow-x: hidden;
-  width: 100%;
-  max-width: 700px;
+  align-items: center;
+  gap: 24px;
+  transition: transform 0.5s ease-in-out;
+  will-change: transform;
 }
 
 .creator-card {
-  flex: 0 0 100%;
-  scroll-snap-align: start;
+  flex: 0 0 700px;
+  box-sizing: border-box;
   background: #f8f8f8;
   border-radius: 10px;
   box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-  margin: 0 10px;
+  transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+  transform: scale(0.85);
+  opacity: 0.25;
+  pointer-events: none;
+}
+
+.creator-card.is-active {
+  transform: scale(1);
+  opacity: 1;
+  z-index: 2;
+  pointer-events: auto;
+}
+
+.carousel-dots {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin-top: -20px;
+  margin-bottom: 40px;
+}
+
+.carousel-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #d5d5d5;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.carousel-dot:hover {
+  background: #7fa8b3;
+}
+
+.carousel-dot.active {
+  background: #005d71;
+  transform: scale(1.3);
 }
 
 .creator-card img {
@@ -237,97 +278,88 @@ hr {
   text-decoration: underline;
 }
 
-.carousel-arrow {
-  background-color: #005d71;
-  color: white;
-  border: none;
-  font-size: 2rem;
-  padding: 10px 15px;
-  cursor: pointer;
-  z-index: 2;
-  transition: background 0.3s;
-}
-
-.carousel-arrow:hover {
-  background-color: #003d4d;
-}
-
-.carousel-arrow.left {
-  position: absolute;
-  left: 0;
-}
-
-.carousel-arrow.right {
-  position: absolute;
-  right: 0;
-}
-
 @media (max-width: 768px) {
-  .carousel-track {
-    overflow-x: auto;
-    scroll-snap-type: x mandatory;
+  .carousel-wrapper {
+    max-width: 340px;
   }
 
-  .carousel-arrow {
-    display: none;
+  .carousel-track {
+    gap: 16px;
+  }
+
+  .creator-card {
+    flex: 0 0 300px;
   }
 }
 
-/* MEMBRES */
-.member-card {
+/* TEAMS */
+
+.team-card {
+  height:320px;
+  position: relative;
   border-radius: 10px;
   overflow: hidden;
-  border: 1px solid #e0e0e0;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
-  display: flex;
-  flex-direction: column;
+  background: #005d71;
+  color: white;
+  transition: 0.2s ease;
+  cursor: pointer;
+  padding-bottom: 20px;
 }
 
-.member-card img {
+.team-card:hover {
+  height:fit-content;
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+}
+
+.card-image {
+  position: relative;
+  height: 250px;
+  overflow: hidden;
+  margin: 10px;
+  border-radius: 5px;
+}
+
+.card-image img {
   width: 100%;
-  aspect-ratio: 1;
+  height: 100%;
   object-fit: cover;
 }
 
-.member-card .content {
+.badge {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background: #ffffff;
+  color: #005d71;
+  padding: 5px 10px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.card-body {
   padding: 15px;
-  background: #f8f8f8;
-  height: 100%;
 }
 
-.member-card .content .tag{
-  padding: 4px 12px;
+.name {
+  font-weight: bold;
+  font-size: 16px;
+  margin-bottom: 5px;
+}
+
+.description {
   font-size: 14px;
-  width: fit-content;
-  color: #005d71;
-  background-color: #005d7130;
-  border-radius: 1000px;
+  opacity: 0;
+  max-height: 0;
+  margin: 0;
+  transition: all 0.3s ease;
 }
 
-.member-card .content .name{
-  font-size: 20px;
-  font-weight: 700;
-  margin-top: 10px;
+.team-card:hover .description {
+  opacity: 1;
+  max-height: fit-content;
 }
-
-.member-card .content .job{
-  margin-top: 5px;
-  color: #005d71;
-}
-
-.member-card .content .description{
-  margin-top: 15px;
-}
-
-
-
-
-
-.member-card .content p{
-  margin: 0px;
-}
-
-
 
 /* AGENDA */
 .thumbnail-agenda img {
@@ -339,17 +371,102 @@ hr {
   font-weight: bold;
 }
 
+
+/* MEMBERS*/
+
+.member-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+  background: #d5d5d5;
+  cursor: pointer;
+  text-align: center;
+  font-size: 0.9rem;
+  box-sizing: border-box;
+}
+
+.member-badge {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background: #005d71;
+  color: #ffffff;
+  padding: 5px 10px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.card-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.7);
+  color: #fff;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 8px;
+  text-align: center;
+  box-sizing: border-box;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+.member-card:hover .card-overlay {
+  opacity: 1;
+}
+
+.member-name {
+  font-weight: bold;
+  margin-top: 6px;
+  font-size: 0.95rem;
+  color: #000;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+.member-description {
+  font-size: 0.85rem;
+  margin-bottom: 6px;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+.member-links a {
+  color: #005d71;
+  text-decoration: none;
+  margin: 2px 4px;
+  padding: 4px 8px;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 6px;
+  font-size: 0.8rem;
+  transition: background-color 0.2s ease;
+}
+
+.member-links a:hover {
+  background-color: rgba(255, 255, 255, 1);
+  text-decoration: none;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 20px;
+}
+
 /* FOOTER */
 
 footer {
   text-align: center;
-  /* centre le footer horizontalement */
   color: #ddd;
   background-color: #005d71;
   border-bottom: 0;
-  /* supprime la bordure du bas */
   border-right: 0;
-  /* supprime la bordure de droite */
   overflow: hidden;
-  /* Ajoute la propriété clearfix */
 }
