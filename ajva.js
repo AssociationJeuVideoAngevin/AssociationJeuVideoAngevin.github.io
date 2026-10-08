@@ -209,7 +209,7 @@ fetch('./static/Data/member.json')
 
                     <div class="card-overlay">
                         ${member.description ? `<p class="member-description">${member.description}</p>` : ''}
-                        ${links.length ? `<p class="member-links">${links.join(' | ')}</p>` : ''}
+                        ${links.length ? `<div class="member-links">${links.join('')}</div>` : ''}
                     </div>
                 </div>
 
