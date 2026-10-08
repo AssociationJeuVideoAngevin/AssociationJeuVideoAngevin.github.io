@@ -14,5 +14,25 @@
           }
         ]
       }
+    }, 
+  {
+    "name": "Totobono",
+    "description": "",
+    "role" : "Créateur",
+    "image": "",
+    "links": {
+      "website": "https://totobono4.itch.io/",
+      "games" :
+      [
+        {
+          "name" : "Microfox",
+          "link" : "https://totobono4.itch.io/microfox"
+        }, 
+        {
+        "name" : "Microtower",
+        "link" : "https://totobono4.itch.io/microtower"
+        }
+      ]
     }
-  ]
+  }
+]

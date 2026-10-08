@@ -2,9 +2,25 @@
   {
     "title": "Black Zen White",
     "creator": "24m² Studio",
-    "link-creator": "",
+    "link-creator": "https://24m2studio.com",
     "link-game": "https://store.steampowered.com/app/3237030/Black_Zen_White/?l=french",
-    "img": "static/images/createurs/blackzenwhite_640x280.jpg",
+    "img": "static/images/createurs/Carousel_24Studio_BlackZenWhite.jpg",
     "description": "Un jeu de plateforme et de réflexion où le monde alterne toutes les 10 secondes entre deux versions : noir puis blanc"
+  }, 
+  {
+    "title": "Microfox",
+    "creator": "Totobono",
+    "link-creator": "https://totobono4.itch.io/",
+    "link-game": "https://totobono4.itch.io/microfox",
+    "img": "static/images/createurs/Carousel_Totobono_Microfox.gif",
+    "description": "Vous êtes un renard malicieux et vous avez très TRÈS faim, mangez toutes les poules pour venir à bout de ce jeu de puzzle 2D sous PICO-8!"
+  },
+  {
+    "title": "MicroTower",
+    "creator": "Totobono",
+    "link-creator": "https://totobono4.itch.io/",
+    "link-game": "https://totobono4.itch.io/microtower",
+    "img": "static/images/createurs/Carousel_Totobono_MicroTower.png",
+    "description": "Un Bullet Hell dans lequel vous montez une tour dans la 86 ! Challenge visuel et mathématique de Game Jam sous PICO-8."
   }
 ]
