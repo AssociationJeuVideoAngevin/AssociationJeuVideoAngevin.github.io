@@ -123,6 +123,13 @@ header {
   height: 80px;
 }
 
+#social-footer {
+  display: flex;
+  justify-content: center;
+  gap: 7px;
+  margin-bottom: 15px;
+}
+
 .social {
   display: flex;
   flex-direction: row;

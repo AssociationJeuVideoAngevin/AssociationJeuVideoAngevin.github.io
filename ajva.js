@@ -224,3 +224,31 @@ fetch('./static/Data/member.json')
         });
     })
     .catch(error => console.error('Erreur chargement member JSON:', error));
+
+// ======================
+// SOCIAL NETWORKS (header + footer)
+// ======================
+fetch('./static/Data/social.json')
+    .then(response => response.json())
+    .then(data => {
+        ['social-header', 'social-footer'].forEach(id => {
+            const container = document.getElementById(id);
+            if (!container) return;
+
+            data.forEach(network => {
+                const link = document.createElement('a');
+                link.href = network.url;
+                link.target = '_blank';
+                link.rel = 'noopener';
+
+                const img = document.createElement('img');
+                img.src = network.icon;
+                img.alt = network.name;
+                img.className = 'social-network-btn clickable';
+
+                link.appendChild(img);
+                container.appendChild(link);
+            });
+        });
+    })
+    .catch(error => console.error('Erreur chargement social JSON:', error));
