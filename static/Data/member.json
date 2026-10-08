@@ -1,20 +1,20 @@
 ﻿[
-    {
-      "name": "24m² Studio",
-      "description": "Petit studio d'un peu plus d'une personne qui fait des jeux vidéo pour le plaisir, bientôt pour la gloire et peut-être un jour pour gagner un peu d'argent.",
-      "role" : "Créateur",
-      "image": "./static/images/members/members_24m2studio_noir_blanc_2000x2000.png",
-      "links": {
-        "website": "https://24m2studio.com",
-        "games" :
-        [
-          {
-            "name" : "Black Zen White",
-            "link" : "https://24m2studio.com/black-zen-white"
-          }
-        ]
-      }
-    }, 
+  {
+    "name": "24m² Studio",
+    "description": "Petit studio d'un peu plus d'une personne qui fait des jeux vidéo pour le plaisir, bientôt pour la gloire et peut-être un jour pour gagner un peu d'argent.",
+    "role" : "Créateur",
+    "image": "./static/images/members/members_24m2studio_noir_blanc_2000x2000.png",
+    "links": {
+      "website": "https://24m2studio.com",
+      "games" :
+      [
+        {
+          "name" : "Black Zen White",
+          "link" : "https://24m2studio.com/black-zen-white"
+        }
+      ]
+    }
+  }, 
   {
     "name": "Totobono",
     "description": "",
@@ -33,6 +33,15 @@
         "link" : "https://totobono4.itch.io/microtower"
         }
       ]
+    }
+  },
+  {
+    "name": "Turtles Games",
+    "description": "Studio freelance spécialisé dans le développement de jeux vidéo et l’accompagnement à l’apprentissage du jeu vidéo.",
+    "role" : "Créatrice",
+    "image": "./static/images/members/Member_TurtlesGames.png",
+    "links": {
+      "website": "https://www.linkedin.com/company/turtles-games"
     }
   }
 ]
