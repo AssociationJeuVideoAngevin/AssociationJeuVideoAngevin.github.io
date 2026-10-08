@@ -123,6 +123,13 @@ header {
   height: 80px;
 }
 
+#social-footer {
+  display: flex;
+  justify-content: center;
+  gap: 7px;
+  margin-bottom: 15px;
+}
+
 .social {
   display: flex;
   flex-direction: row;
@@ -389,6 +396,7 @@ hr {
   position: absolute;
   top: 10px;
   left: 10px;
+  z-index: 2;
   background: #005d71;
   color: #ffffff;
   padding: 5px 10px;
@@ -409,14 +417,18 @@ hr {
   transition: opacity 0.3s ease;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
-  padding: 8px;
+  gap: 10px;
+  padding: 44px 8px 8px; /* laisse la place au badge en haut */
   text-align: center;
   box-sizing: border-box;
+  overflow-y: auto; /* scroll si trop de contenu */
   word-wrap: break-word;
   overflow-wrap: break-word;
 }
+
+.card-overlay > :first-child { margin-top: auto; }
+.card-overlay > :last-child  { margin-bottom: auto; }
 
 .member-card:hover .card-overlay {
   opacity: 1;
@@ -433,15 +445,21 @@ hr {
 
 .member-description {
   font-size: 0.85rem;
-  margin-bottom: 6px;
+  margin: 0;
   word-wrap: break-word;
   overflow-wrap: break-word;
 }
-
+.member-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 6px;
+  margin: 0;
+}
 .member-links a {
   color: #005d71;
   text-decoration: none;
-  margin: 2px 4px;
+  margin: 0;
   padding: 4px 8px;
   background-color: rgba(255, 255, 255, 0.8);
   border-radius: 6px;

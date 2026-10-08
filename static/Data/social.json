@@ -1,0 +1,22 @@
+﻿[ 
+  {
+  "name": "Instagram",
+  "url": "https://www.instagram.com/associationdujeuvideoangevin?stkn=YmV1eGhpeTFqdnZq",
+  "icon": "./static/images/logo_insta.png"
+  },
+  {
+    "name": "Discord",
+    "url": "https://discord.gg/MAqysMSsG8",
+    "icon": "./static/images/logo_discord.png"
+  },
+  {
+    "name": "Bluesky",
+    "url": "https://bsky.app/profile/ajva.bsky.social",
+    "icon": "./static/images/bluesky_media_kit_logo_2.png"
+  },
+  {
+    "name": "Mastodon",
+    "url": "https://mastodon.social/@ajva",
+    "icon": "./static/images/logo_mastodon_128.png"
+  }
+]
