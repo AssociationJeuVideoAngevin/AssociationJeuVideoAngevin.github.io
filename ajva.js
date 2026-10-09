@@ -1,3 +1,32 @@
+if ('scrollRestoration' in history) {
+    history.scrollRestoration = 'manual';
+}
+
+let userHasScrolled = false;
+['wheel', 'touchstart', 'keydown', 'mousedown'].forEach(evt =>
+    window.addEventListener(evt, () => { userHasScrolled = true; }, { once: true, passive: true })
+);
+
+function keepAtTop() {
+    if (!location.hash && !userHasScrolled && window.scrollY > 0) {
+        window.scrollTo({ top: 0, behavior: 'instant' });
+    }
+}
+window.addEventListener('scroll', keepAtTop);
+window.addEventListener('load', keepAtTop);
+
+window.addEventListener('DOMContentLoaded', () => {
+    const frame = document.getElementById('calendar-frame');
+    if (!frame) return;
+
+    const observer = new IntersectionObserver(entries => {
+        if (entries.some(e => e.isIntersecting)) {
+            frame.src = frame.dataset.src;
+            observer.disconnect();
+        }
+    }, { rootMargin: '300px' });
+    observer.observe(frame);
+});
 function updateDropDownVisibility(id, visibility) {
     if (visibility) {
         document.getElementById(id)?.classList?.toggle('show');
