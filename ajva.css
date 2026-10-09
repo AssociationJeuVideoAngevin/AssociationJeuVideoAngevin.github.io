@@ -197,9 +197,6 @@ hr {
 
 .creator-card {
   flex: 0 0 700px;
-  max-height: 480px;
-  display: flex;
-  flex-direction: column;
   box-sizing: border-box;
   background: #f8f8f8;
   border-radius: 10px;
@@ -245,18 +242,15 @@ hr {
 }
 
 .creator-card img {
-  display: block;
   width: 100%;
-  height: 300px;          
-  object-fit: contain;    
-  background: #005d71;  
+  height: auto;
   border-radius: 10px 10px 0 0;
+  object-fit: cover;
 }
 
 .creator-info {
   padding: 15px;
   text-align: left;
-  overflow-y: auto;
 }
 
 .creator-info h3 {
@@ -290,10 +284,6 @@ hr {
 
   .creator-card {
     flex: 0 0 300px;
-  }
-
-  .creator-card img {
-    max-height: 200px;
   }
 }
 
