@@ -43,5 +43,14 @@
     "links": {
       "website": "https://www.linkedin.com/company/turtles-games"
     }
+  },
+  {
+    "name": "Glutton Stone Studio",
+    "description": "Studio de jeux vidéo Angevins",
+    "role" : "Studio",
+    "image": "./static/images/members/GluttonStoneStudio.svg",
+    "links": {
+      "website": "https://www.glutton-stone-studio.com"
+    }
   }
 ]
